@@ -1,0 +1,52 @@
+{
+  "title": "MiPower",
+  "config": {
+    "step": {
+      "user": {
+        "title": "MiPower yapılandırması",
+        "description": "Yapılandırma yöntemini seçin: manuel veya daha önce Home Assistant tarafından eklenmiş bir cihazı (media_player) seçin.",
+        "data": {
+          "name": "Cihaz ismi",
+          "mac": "Bluetooth MAC adresi (AA:BB:CC:11:22:33)",
+          "bluetooth_mac": "Bluetooth MAC Adresi",
+          "device_id": "Home Assistant Cihazı",
+          "method": "Yapılandırma yöntemi",
+          "device": "Home Assistant cihazı seçin"
+        }
+      }
+    }
+  },
+  "issues": {
+    "no_bluetoothctl": "Host'ta bluetoothctl bulunamadı. BlueZ'in yüklü olduğundan ve Home Assistant'ın bluetoothctl'e erişebildiğinden emin olun.",
+    "invalid_mac": "Geçersiz MAC adresi formatı. AA:BB:CC:11:22:33 formatını kullanın.",
+    "no_ha_device_found": "Seçmek için uygun bir media_player cihazı Home Assistant'ta bulunamadı."
+  },
+  "entity": {
+    "switch": {
+      "name": "MiPower"
+    }
+  },
+  "options": {
+    "display_name": "Gösterim adı",
+    "display_name_description": "Oluşturulan entity için kullanıcı dostu isim.",
+    "mac": "MAC adresi",
+    "mac_description": "Hedef cihazın Bluetooth MAC adresi (seçilen cihazdan algılanmışsa opsiyonel).",
+    "device_id": "Cihaz",
+    "device_id_description": "Kontrol etmek istediğiniz media_player cihazını seçin (cihaz kayıtlarından).",
+    "off_debounce": "Kapatma gecikmesi (saniye)",
+    "off_debounce_description": "Cihaz kapandıktan sonra tekrarlayan KAPAT sinyallerini kaç saniye görmezden geleceğini belirler.",
+    "on_debounce": "Açma gecikmesi (saniye)",
+    "on_debounce_description": "Cihaz açıldıktan sonra tekrarlayan AÇ sinyallerini kaç saniye görmezden geleceğini belirler.",
+    "connect_timeout": "Bağlanma zaman aşımı (saniye)",
+    "connect_timeout_description": "Tek bir bağlantı/uyandırma denemesi için zaman aşımı süresi (saniye).",
+    "retry_interval": "Yeniden deneme aralığı (saniye)",
+    "retry_interval_description": "Bağlantı/uyandırma denemeleri arasındaki bekleme süresi (saniye).",
+    "cleanup_on_unload": "Kaldırma sırasında önbelleği temizle",
+    "cleanup_on_unload_description": "Entegrasyon kaldırıldığında __pycache__ dizinlerini otomatik olarak sil."
+  },
+  "errors": {
+    "device_required": "Lütfen bir cihaz seçin.",
+    "invalid_value": "Geçersiz değer.",
+    "required_field": "Bu alan zorunludur."
+  }
+}

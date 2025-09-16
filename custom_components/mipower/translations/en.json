@@ -1,0 +1,52 @@
+{
+  "title": "MiPower",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure MiPower",
+        "description": "Choose how to configure: manually or select an existing Home Assistant device (media_player).",
+        "data": {
+          "name": "Device name",
+          "mac": "Bluetooth MAC address (AA:BB:CC:11:22:33)",
+          "bluetooth_mac": "Bluetooth MAC Address",
+          "device_id": "Linked Home Assistant Device",
+          "method": "Configuration method",
+          "device": "Select Home Assistant device"
+        }
+      }
+    }
+  },
+  "issues": {
+    "no_bluetoothctl": "bluetoothctl not found on host. Ensure BlueZ is installed and Home Assistant has access to bluetoothctl.",
+    "invalid_mac": "Invalid MAC address format. Use AA:BB:CC:11:22:33.",
+    "no_ha_device_found": "No suitable media_player devices found in Home Assistant to select."
+  },
+  "entity": {
+    "switch": {
+      "name": "MiPower"
+    }
+  },
+  "options": {
+    "display_name": "Display name",
+    "display_name_description": "Friendly name to show for the created entity.",
+    "mac": "MAC address",
+    "mac_description": "Bluetooth MAC address of the target device (optional if detected from selected device).",
+    "device_id": "Device",
+    "device_id_description": "Select the media_player device (from device registry) to control.",
+    "off_debounce": "Off debounce (seconds)",
+    "off_debounce_description": "Number of seconds to ignore repeated OFF signals after the device turns off.",
+    "on_debounce": "On debounce (seconds)",
+    "on_debounce_description": "Number of seconds to ignore repeated ON signals after the device turns on.",
+    "connect_timeout": "Connect timeout (seconds)",
+    "connect_timeout_description": "Timeout for a single connect/wakeup attempt in seconds.",
+    "retry_interval": "Retry interval (seconds)",
+    "retry_interval_description": "Interval between reconnect/wakeup retry attempts.",
+    "cleanup_on_unload": "Cleanup cached files on unload",
+    "cleanup_on_unload_description": "Automatically remove __pycache__ directories when the integration is unloaded."
+  },
+  "errors": {
+    "device_required": "Please choose a device.",
+    "invalid_value": "Invalid value.",
+    "required_field": "This field is required."
+  }
+}

@@ -1,0 +1,5 @@
+# custom_components/mipower/services.yaml
+cleanup_pycache:
+  name: "MiPower: Cleanup __pycache__"
+  description: "Remove __pycache__ directories under the MiPower custom component directory."
+  fields: {}
