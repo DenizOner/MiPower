@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Valitse Asennustapa",
+        "menu_options": {
+          "easy_setup": "Helppo Asennus",
+          "advanced_setup": "Edistynyt Asennus"
+        }
+      },
+      "easy_setup": {
+        "title": "Helppo Asennus",
+        "description": "Valitse luettelosta Bluetooth-yhteensopiva mediasoitin. \n(Vain laitteet, jotka näkyvät Bluetooth-mediasoittimina, on lueteltu.)",
+        "data": {
+          "device": "Laite"
+        }
+      },
+      "advanced_setup": {
+        "title": "Edistynyt Asennus (Vaihe: 1/3)",
+        "description": "Valitse mikä tahansa mediasoitin-entiteetti Home Assistantista.",
+        "data": {
+          "device_id": "Laite"
+        }
+      },
+      "mac_address": {
+        "title": "Edistynyt Asennus (Vaihe: 2/3)",
+        "description": "Syötä valitun laitteen Bluetooth MAC-osoite.\n(Jos löytyy automaattisesti, se täytetään etukäteen.)",
+        "data": {
+          "mac": "Bluetooth MAC-osoite"
+        }
+      },
+      "settings": {
+        "title": "Edistynyt Asennus (Vaihe: 3/3)",
+        "description": "Määritä ajoitus ja muut edistyneet asetukset.",
+        "data": {
+          "on_debounce": "Käynnistysviive (sekuntia)",
+          "off_debounce": "Sammutusviive (sekuntia)",
+          "inter_step_delay": "Viive Komentojen Välillä (sekuntia)",
+          "spawn_timeout": "Prosessi Käynnistysaikakatkaisu (sekuntia)",
+          "pair_timeout": "Pariliitos Aikakatkaisu (sekuntia)",
+          "trust_timeout": "Luottamus Aikakatkaisu (sekuntia)",
+          "scan_duration": "Bluetooth-skannauksen Kesto (sekuntia)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Tämä laite on jo määritetty.",
+      "no_bt_media_players_found_strict": "Bluetooth-mediasoittimia ei löytynyt. Kokeile Edistynyttä Asennustapaa.",
+      "device_not_found": "Laitetta ei löytynyt. Yritä uudelleen.",
+      "no_media_player_entity_found": "Valitulle laitteelle ei löytynyt mediasoitin-entiteettiä.",
+      "unknown_step": "Tuntematon virhe tapahtui. Aloita alusta."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Asetukset",
+        "description": "Määritä MiPower-kytkimen edistyneet asetukset.\n\n**Mediasoitin:** {media_player_name}\n**MAC-osoite:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Käynnistysviive (sekuntia)",
+          "off_debounce": "Sammutusviive (sekuntia)",
+          "inter_step_delay": "Viive Komentojen Välillä (sekuntia)",
+          "spawn_timeout": "Prosessi Käynnistysaikakatkaisu (sekuntia)",
+          "pair_timeout": "Pariliitos Aikakatkaisu (sekuntia)",
+          "trust_timeout": "Luottamus Aikakatkaisu (sekuntia)",
+          "scan_duration": "Bluetooth-skannauksen Kesto (sekuntia)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Chagua Njia ya Kuweka",
+        "menu_options": {
+          "easy_setup": "Kuweka Rahisi",
+          "advanced_setup": "Kuweka kwa Juu"
+        }
+      },
+      "easy_setup": {
+        "title": "Kuweka Rahisi",
+        "description": "Chagua kicheza media chako kinachowezeshwa na Bluetooth kutoka kwenye orodha. \n(Vifaa vinavyoonekana kama vicheza media vya Bluetooth pekee ndivyo vilivyoorodheshwa.)",
+        "data": {
+          "device": "Kifaa"
+        }
+      },
+      "advanced_setup": {
+        "title": "Kuweka kwa Juu (Hatua: 1/3)",
+        "description": "Chagua huluki yoyote ya kicheza media kutoka Home Assistant.",
+        "data": {
+          "device_id": "Kifaa"
+        }
+      },
+      "mac_address": {
+        "title": "Kuweka kwa Juu (Hatua: 2/3)",
+        "description": "Weka anwani ya MAC ya Bluetooth kwa kifaa kilichochaguliwa.\n(Ikipatikana kiotomatiki, itajazwa mapema.)",
+        "data": {
+          "mac": "Anwani ya MAC ya Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Kuweka kwa Juu (Hatua: 3/3)",
+        "description": "Sanidi muda na mipangilio mingine ya hali ya juu.",
+        "data": {
+          "on_debounce": "Kuzimisha Kengele ya Kuwasha (sekunde)",
+          "off_debounce": "Kuzimisha Kengele ya Kuzima (sekunde)",
+          "inter_step_delay": "Kuchelewa Kati ya Amri (sekunde)",
+          "spawn_timeout": "Muda wa Kuanzisha Mchakato (sekunde)",
+          "pair_timeout": "Muda wa Kuunganisha (sekunde)",
+          "trust_timeout": "Muda wa Kuamini (sekunde)",
+          "scan_duration": "Muda wa Uchanganuzi wa Bluetooth (sekunde)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Kifaa hiki tayari kimesanidiwa.",
+      "no_bt_media_players_found_strict": "Hakuna kicheza media cha Bluetooth kilichopatikana. Jaribu njia ya Kuweka kwa Juu.",
+      "device_not_found": "Kifaa hakijapatikana. Tafadhali jaribu tena.",
+      "no_media_player_entity_found": "Hakuna huluki ya kicheza media iliyopatikana kwa kifaa kilichochaguliwa.",
+      "unknown_step": "Hitilafu isiyojulikana ilitokea. Tafadhali anza upya."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Mipangilio ya MiPower",
+        "description": "Sanidi mipangilio ya hali ya juu kwa swichi ya MiPower.\n\n**Kicheza Media:** {media_player_name}\n**Anwani ya MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Kuzimisha Kengele ya Kuwasha (sekunde)",
+          "off_debounce": "Kuzimisha Kengele ya Kuzima (sekunde)",
+          "inter_step_delay": "Kuchelewa Kati ya Amri (sekunde)",
+          "spawn_timeout": "Muda wa Kuanzisha Mchakato (sekunde)",
+          "pair_timeout": "Muda wa Kuunganisha (sekunde)",
+          "trust_timeout": "Muda wa Kuamini (sekunde)",
+          "scan_duration": "Muda wa Uchanganuzi wa Bluetooth (sekunde)"
+        }
+      }
+    }
+  }
+}

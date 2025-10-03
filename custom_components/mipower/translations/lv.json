@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Izvēlieties Iestatīšanas Metodi",
+        "menu_options": {
+          "easy_setup": "Vienkārša Iestatīšana",
+          "advanced_setup": "Paplašināta Iestatīšana"
+        }
+      },
+      "easy_setup": {
+        "title": "Vienkārša Iestatīšana",
+        "description": "Izvēlieties savu Bluetooth iespējotu multivides atskaņotāju no saraksta. \n(Uzkaitītas ir tikai tās ierīces, kas parādās kā Bluetooth multivides atskaņotāji.)",
+        "data": {
+          "device": "Ierīce"
+        }
+      },
+      "advanced_setup": {
+        "title": "Paplašināta Iestatīšana (Solis: 1/3)",
+        "description": "Izvēlieties jebkuru multivides atskaņotāja entītiju no Home Assistant.",
+        "data": {
+          "device_id": "Ierīce"
+        }
+      },
+      "mac_address": {
+        "title": "Paplašināta Iestatīšana (Solis: 2/3)",
+        "description": "Ievadiet Bluetooth MAC adresi izvēlētajai ierīcei.\n(Ja tiek atrasts automātiski, tas tiks aizpildīts iepriekš.)",
+        "data": {
+          "mac": "Bluetooth MAC Adrese"
+        }
+      },
+      "settings": {
+        "title": "Paplašināta Iestatīšana (Solis: 3/3)",
+        "description": "Konfigurējiet laiku un citus paplašinātos iestatījumus.",
+        "data": {
+          "on_debounce": "Ieslēgšanas Aizture (sekundes)",
+          "off_debounce": "Izslēgšanas Aizture (sekundes)",
+          "inter_step_delay": "Aizture Starp Komandām (sekundes)",
+          "spawn_timeout": "Procesa Starta Laika Limits (sekundes)",
+          "pair_timeout": "Pārī Savienošanas Laika Limits (sekundes)",
+          "trust_timeout": "Uzticamības Laika Limits (sekundes)",
+          "scan_duration": "Bluetooth Skenēšanas Ilgums (sekundes)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Šī ierīce jau ir konfigurēta.",
+      "no_bt_media_players_found_strict": "Nav atrasts neviens Bluetooth multivides atskaņotājs. Izmēģiniet Paplašināto Iestatīšanas metodi.",
+      "device_not_found": "Ierīce nav atrasta. Lūdzu, mēģiniet vēlreiz.",
+      "no_media_player_entity_found": "Izvēlētajai ierīcei nav atrasta multivides atskaņotāja entītija.",
+      "unknown_step": "Radās nezināma kļūda. Lūdzu, sāciet no jauna."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Iestatījumi",
+        "description": "Konfigurējiet paplašinātos iestatījumus MiPower slēdzim.\n\n**Multivides Atskaņotājs:** {media_player_name}\n**MAC Adrese:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Ieslēgšanas Aizture (sekundes)",
+          "off_debounce": "Izslēgšanas Aizture (sekundes)",
+          "inter_step_delay": "Aizture Starp Komandām (sekundes)",
+          "spawn_timeout": "Procesa Starta Laika Limits (sekundes)",
+          "pair_timeout": "Pārī Savienošanas Laika Limits (sekundes)",
+          "trust_timeout": "Uzticamības Laika Limits (sekundes)",
+          "scan_duration": "Bluetooth Skenēšanas Ilgums (sekundes)"
+        }
+      }
+    }
+  }
+}

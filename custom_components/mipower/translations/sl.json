@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Izberite Metodo Namestitve",
+        "menu_options": {
+          "easy_setup": "Enostavna Namestitev",
+          "advanced_setup": "Napredna Namestitev"
+        }
+      },
+      "easy_setup": {
+        "title": "Enostavna Namestitev",
+        "description": "Izberite svoj medijski predvajalnik z omogočenim Bluetoothom s seznama. \n(Navedene so samo naprave, ki se pojavijo kot medijski predvajalniki Bluetooth.)",
+        "data": {
+          "device": "Naprava"
+        }
+      },
+      "advanced_setup": {
+        "title": "Napredna Namestitev (Korak: 1/3)",
+        "description": "Izberite katero koli entiteto medijskega predvajalnika v Home Assistant.",
+        "data": {
+          "device_id": "Naprava"
+        }
+      },
+      "mac_address": {
+        "title": "Napredna Namestitev (Korak: 2/3)",
+        "description": "Vnesite naslov MAC Bluetooth za izbrano napravo.\n(Če je najden samodejno, bo predhodno izpolnjen.)",
+        "data": {
+          "mac": "Naslov MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Napredna Namestitev (Korak: 3/3)",
+        "description": "Konfigurirajte časovno usklajevanje in druge napredne nastavitve.",
+        "data": {
+          "on_debounce": "Odlog Vklopa (sekunde)",
+          "off_debounce": "Odlog Izklopa (sekunde)",
+          "inter_step_delay": "Zamik Med Ukazi (sekunde)",
+          "spawn_timeout": "Časovna Omejitev Zagona Procesov (sekunde)",
+          "pair_timeout": "Časovna Omejitev Seznanjanja (sekunde)",
+          "trust_timeout": "Časovna Omejitev Zaupanja (sekunde)",
+          "scan_duration": "Trajanje Skeniranja Bluetooth (sekunde)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Ta naprava je že konfigurirana.",
+      "no_bt_media_players_found_strict": "Medijski predvajalniki Bluetooth niso najdeni. Poskusite metodo Napredna Namestitev.",
+      "device_not_found": "Naprava ni najdena. Poskusite znova.",
+      "no_media_player_entity_found": "Za izbrano napravo ni najdena entiteta medijskega predvajalnika.",
+      "unknown_step": "Prišlo je do neznane napake. Prosimo, začnite znova."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavitve MiPower",
+        "description": "Konfigurirajte napredne nastavitve za stikalo MiPower.\n\n**Medijski Predvajalnik:** {media_player_name}\n**Naslov MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Odlog Vklopa (sekunde)",
+          "off_debounce": "Odlog Izklopa (sekunde)",
+          "inter_step_delay": "Zamik Med Ukazi (sekunde)",
+          "spawn_timeout": "Časovna Omejitev Zagona Procesov (sekunde)",
+          "pair_timeout": "Časovna Omejitev Seznanjanja (sekunde)",
+          "trust_timeout": "Časovna Omejitev Zaupanja (sekunde)",
+          "scan_duration": "Trajanje Skeniranja Bluetooth (sekunde)"
+        }
+      }
+    }
+  }
+}

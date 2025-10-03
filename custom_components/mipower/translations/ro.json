@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Alege Metoda de Configurare",
+        "menu_options": {
+          "easy_setup": "Configurare Ușoară",
+          "advanced_setup": "Configurare Avansată"
+        }
+      },
+      "easy_setup": {
+        "title": "Configurare Ușoară",
+        "description": "Selectează playerul media cu Bluetooth din listă. \n(Doar dispozitivele care apar ca player media Bluetooth sunt listate.)",
+        "data": {
+          "device": "Dispozitiv"
+        }
+      },
+      "advanced_setup": {
+        "title": "Configurare Avansată (Pas: 1/3)",
+        "description": "Selectează orice entitate de player media din Home Assistant.",
+        "data": {
+          "device_id": "Dispozitiv"
+        }
+      },
+      "mac_address": {
+        "title": "Configurare Avansată (Pas: 2/3)",
+        "description": "Introdu adresa MAC Bluetooth pentru dispozitivul selectat.\n(Dacă este găsită automat, va fi pre-completată.)",
+        "data": {
+          "mac": "Adresă MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Configurare Avansată (Pas: 3/3)",
+        "description": "Configurează sincronizarea și alte setări avansate.",
+        "data": {
+          "on_debounce": "Debounce Pornire (secunde)",
+          "off_debounce": "Debounce Oprire (secunde)",
+          "inter_step_delay": "Întârziere Între Comenzi (secunde)",
+          "spawn_timeout": "Timeout Proces Pornire (secunde)",
+          "pair_timeout": "Timeout Asociere (secunde)",
+          "trust_timeout": "Timeout Încredere (secunde)",
+          "scan_duration": "Durata Scanare Bluetooth (secunde)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Acest dispozitiv este deja configurat.",
+      "no_bt_media_players_found_strict": "Nu s-au găsit playere media Bluetooth. Încearcă metoda de Configurare Avansată.",
+      "device_not_found": "Dispozitivul nu a fost găsit. Te rugăm să încerci din nou.",
+      "no_media_player_entity_found": "Nu s-a găsit nicio entitate de player media pentru dispozitivul selectat.",
+      "unknown_step": "A apărut o eroare necunoscută. Te rugăm să o iei de la capăt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Setări MiPower",
+        "description": "Configurează setările avansate pentru comutatorul MiPower.\n\n**Player Media:** {media_player_name}\n**Adresă MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Debounce Pornire (secunde)",
+          "off_debounce": "Debounce Oprire (secunde)",
+          "inter_step_delay": "Întârziere Între Comenzi (secunde)",
+          "spawn_timeout": "Timeout Proces Pornire (secunde)",
+          "pair_timeout": "Timeout Asociere (secunde)",
+          "trust_timeout": "Timeout Încredere (secunde)",
+          "scan_duration": "Durata Scanare Bluetooth (secunde)"
+        }
+      }
+    }
+  }
+}

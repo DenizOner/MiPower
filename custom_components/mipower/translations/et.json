@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Vali Seadistamise Meetod",
+        "menu_options": {
+          "easy_setup": "Lihtne Seadistamine",
+          "advanced_setup": "Täpsem Seadistamine"
+        }
+      },
+      "easy_setup": {
+        "title": "Lihtne Seadistamine",
+        "description": "Vali loendist oma Bluetooth-toega meediumipleier. \n(Loendis on ainult need seadmed, mis ilmuvad Bluetooth-meediumipleieritena.)",
+        "data": {
+          "device": "Seade"
+        }
+      },
+      "advanced_setup": {
+        "title": "Täpsem Seadistamine (Samm: 1/3)",
+        "description": "Vali Home Assistantist suvaline meediumipleieri olemin.",
+        "data": {
+          "device_id": "Seade"
+        }
+      },
+      "mac_address": {
+        "title": "Täpsem Seadistamine (Samm: 2/3)",
+        "description": "Sisesta valitud seadme Bluetooth MAC-aadress.\n(Kui see leitakse automaatselt, täidetakse see ette.)",
+        "data": {
+          "mac": "Bluetooth MAC-aadress"
+        }
+      },
+      "settings": {
+        "title": "Täpsem Seadistamine (Samm: 3/3)",
+        "description": "Konfigureeri ajastus ja muud täpsemad sätted.",
+        "data": {
+          "on_debounce": "Sisselülitamise Viide (sekundid)",
+          "off_debounce": "Väljalülitamise Viide (sekundid)",
+          "inter_step_delay": "Viivitus Käskude Vahel (sekundid)",
+          "spawn_timeout": "Protsessi Käivitamise Ajalõpp (sekundid)",
+          "pair_timeout": "Sidumise Ajalõpp (sekundid)",
+          "trust_timeout": "Usaldusväärsuse Ajalõpp (sekundid)",
+          "scan_duration": "Bluetooth Skaneerimise Kestus (sekundid)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "See seade on juba konfigureeritud.",
+      "no_bt_media_players_found_strict": "Bluetooth meediumipleiereid ei leitud. Proovi Täpsema Seadistamise meetodit.",
+      "device_not_found": "Seadet ei leitud. Palun proovi uuesti.",
+      "no_media_player_entity_found": "Valitud seadme jaoks ei leitud meediumipleieri oleminit.",
+      "unknown_step": "Ilmnes tundmatu viga. Palun alusta uuesti."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Seadistused",
+        "description": "Konfigureeri MiPower lüliti täpsemad sätted.\n\n**Meediumipleier:** {media_player_name}\n**MAC-aadress:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Sisselülitamise Viide (sekundid)",
+          "off_debounce": "Väljalülitamise Viide (sekundid)",
+          "inter_step_delay": "Viivitus Käskude Vahel (sekundid)",
+          "spawn_timeout": "Protsessi Käivitamise Ajalõpp (sekundid)",
+          "pair_timeout": "Sidumise Ajalõpp (sekundid)",
+          "trust_timeout": "Usaldusväärsuse Ajalõpp (sekundid)",
+          "scan_duration": "Bluetooth Skaneerimise Kestus (sekundid)"
+        }
+      }
+    }
+  }
+}

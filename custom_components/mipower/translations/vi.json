@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Chọn Phương thức Thiết lập",
+        "menu_options": {
+          "easy_setup": "Thiết lập Dễ dàng",
+          "advanced_setup": "Thiết lập Nâng cao"
+        }
+      },
+      "easy_setup": {
+        "title": "Thiết lập Dễ dàng",
+        "description": "Chọn trình phát media hỗ trợ Bluetooth của bạn từ danh sách. \n(Chỉ các thiết bị xuất hiện dưới dạng trình phát media Bluetooth mới được liệt kê.)",
+        "data": {
+          "device": "Thiết bị"
+        }
+      },
+      "advanced_setup": {
+        "title": "Thiết lập Nâng cao (Bước: 1/3)",
+        "description": "Chọn bất kỳ thực thể trình phát media nào từ Home Assistant.",
+        "data": {
+          "device_id": "Thiết bị"
+        }
+      },
+      "mac_address": {
+        "title": "Thiết lập Nâng cao (Bước: 2/3)",
+        "description": "Nhập địa chỉ MAC Bluetooth cho thiết bị đã chọn.\n(Nếu tìm thấy tự động, nó sẽ được điền trước.)",
+        "data": {
+          "mac": "Địa chỉ MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Thiết lập Nâng cao (Bước: 3/3)",
+        "description": "Cấu hình thời gian và các cài đặt nâng cao khác.",
+        "data": {
+          "on_debounce": "Độ trễ Bật (giây)",
+          "off_debounce": "Độ trễ Tắt (giây)",
+          "inter_step_delay": "Độ trễ Giữa các Lệnh (giây)",
+          "spawn_timeout": "Thời gian chờ Khởi tạo Tiến trình (giây)",
+          "pair_timeout": "Thời gian chờ Ghép nối (giây)",
+          "trust_timeout": "Thời gian chờ Tin cậy (giây)",
+          "scan_duration": "Thời gian Quét Bluetooth (giây)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Thiết bị này đã được cấu hình.",
+      "no_bt_media_players_found_strict": "Không tìm thấy trình phát media Bluetooth nào. Hãy thử phương thức Thiết lập Nâng cao.",
+      "device_not_found": "Không tìm thấy thiết bị. Vui lòng thử lại.",
+      "no_media_player_entity_found": "Không tìm thấy thực thể trình phát media nào cho thiết bị đã chọn.",
+      "unknown_step": "Đã xảy ra lỗi không xác định. Vui lòng bắt đầu lại."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cài đặt MiPower",
+        "description": "Cấu hình các cài đặt nâng cao cho công tắc MiPower.\n\n**Trình phát Media:** {media_player_name}\n**Địa chỉ MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Độ trễ Bật (giây)",
+          "off_debounce": "Độ trễ Tắt (giây)",
+          "inter_step_delay": "Độ trễ Giữa các Lệnh (giây)",
+          "spawn_timeout": "Thời gian chờ Khởi tạo Tiến trình (giây)",
+          "pair_timeout": "Thời gian chờ Ghép nối (giây)",
+          "trust_timeout": "Thời gian chờ Tin cậy (giây)",
+          "scan_duration": "Thời gian Quét Bluetooth (giây)"
+        }
+      }
+    }
+  }
+}

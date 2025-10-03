@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "בחר שיטת הגדרה",
+        "menu_options": {
+          "easy_setup": "הגדרה קלה",
+          "advanced_setup": "הגדרה מתקדמת"
+        }
+      },
+      "easy_setup": {
+        "title": "הגדרה קלה",
+        "description": "בחר את נגן המדיה התומך ב-Bluetooth מהרשימה. \n(רק מכשירים המופיעים כנגני מדיה Bluetooth מופיעים ברשימה.)",
+        "data": {
+          "device": "מכשיר"
+        }
+      },
+      "advanced_setup": {
+        "title": "הגדרה מתקדמת (שלב: 1/3)",
+        "description": "בחר ישות כלשהי של נגן מדיה מתוך Home Assistant.",
+        "data": {
+          "device_id": "מכשיר"
+        }
+      },
+      "mac_address": {
+        "title": "הגדרה מתקדמת (שלב: 2/3)",
+        "description": "הזן את כתובת ה-MAC של Bluetooth עבור המכשיר הנבחר.\n(אם נמצא אוטומטית, הוא ימולא מראש.)",
+        "data": {
+          "mac": "כתובת MAC של Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "הגדרה מתקדמת (שלב: 3/3)",
+        "description": "הגדר תזמון והגדרות מתקדמות אחרות.",
+        "data": {
+          "on_debounce": "השהיית הפעלה (שניות)",
+          "off_debounce": "השהיית כיבוי (שניות)",
+          "inter_step_delay": "השהיה בין פקודות (שניות)",
+          "spawn_timeout": "פסק זמן להפעלת תהליך (שניות)",
+          "pair_timeout": "פסק זמן לזיווג (שניות)",
+          "trust_timeout": "פסק זמן לאמון (שניות)",
+          "scan_duration": "משך סריקת Bluetooth (שניות)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "מכשיר זה כבר הוגדר.",
+      "no_bt_media_players_found_strict": "לא נמצאו נגני מדיה Bluetooth. נסה את שיטת ההגדרה המתקדמת.",
+      "device_not_found": "המכשיר לא נמצא. אנא נסה שוב.",
+      "no_media_player_entity_found": "לא נמצאה ישות נגן מדיה עבור המכשיר הנבחר.",
+      "unknown_step": "אירעה שגיאה לא ידועה. אנא התחל מחדש."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "הגדרות MiPower",
+        "description": "הגדר הגדרות מתקדמות עבור מתג MiPower.\n\n**נגן מדיה:** {media_player_name}\n**כתובת MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "השהיית הפעלה (שניות)",
+          "off_debounce": "השהיית כיבוי (שניות)",
+          "inter_step_delay": "השהיה בין פקודות (שניות)",
+          "spawn_timeout": "פסק זמן להפעלת תהליך (שניות)",
+          "pair_timeout": "פסק זמן לזיווג (שניות)",
+          "trust_timeout": "פסק זמן לאמון (שניות)",
+          "scan_duration": "משך סריקת Bluetooth (שניות)"
+        }
+      }
+    }
+  }
+}

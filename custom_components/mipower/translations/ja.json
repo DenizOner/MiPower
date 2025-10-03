@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "セットアップ方法を選択",
+        "menu_options": {
+          "easy_setup": "簡単セットアップ",
+          "advanced_setup": "高度なセットアップ"
+        }
+      },
+      "easy_setup": {
+        "title": "簡単セットアップ",
+        "description": "リストからBluetooth対応メディアプレーヤーを選択してください。 \n(Bluetoothメディアプレーヤーとして表示されるデバイスのみがリストされます。)",
+        "data": {
+          "device": "デバイス"
+        }
+      },
+      "advanced_setup": {
+        "title": "高度なセットアップ (ステップ: 1/3)",
+        "description": "Home Assistantから任意のメディアプレーヤーエンティティを選択してください。",
+        "data": {
+          "device_id": "デバイス"
+        }
+      },
+      "mac_address": {
+        "title": "高度なセットアップ (ステップ: 2/3)",
+        "description": "選択したデバイスのBluetooth MACアドレスを入力してください。\n(自動的に見つかった場合は、事前に入力されます。)",
+        "data": {
+          "mac": "Bluetooth MACアドレス"
+        }
+      },
+      "settings": {
+        "title": "高度なセットアップ (ステップ: 3/3)",
+        "description": "タイミングおよびその他の高度な設定を構成します。",
+        "data": {
+          "on_debounce": "電源オンのデバウンス (秒)",
+          "off_debounce": "電源オフのデバウンス (秒)",
+          "inter_step_delay": "コマンド間の遅延 (秒)",
+          "spawn_timeout": "プロセス起動タイムアウト (秒)",
+          "pair_timeout": "ペアリングタイムアウト (秒)",
+          "trust_timeout": "信頼タイムアウト (秒)",
+          "scan_duration": "Bluetoothスキャン時間 (秒)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "このデバイスは既に構成されています。",
+      "no_bt_media_players_found_strict": "Bluetoothメディアプレーヤーが見つかりません。高度なセットアップ方法を試してください。",
+      "device_not_found": "デバイスが見つかりません。もう一度やり直してください。",
+      "no_media_player_entity_found": "選択したデバイスのメディアプレーヤーエンティティが見つかりません。",
+      "unknown_step": "不明なエラーが発生しました。最初からやり直してください。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower設定",
+        "description": "MiPowerスイッチの高度な設定を構成します。\n\n**メディアプレーヤー:** {media_player_name}\n**MACアドレス:** {mac_address}\n",
+        "data": {
+          "on_debounce": "電源オンのデバウンス (秒)",
+          "off_debounce": "電源オフのデバウンス (秒)",
+          "inter_step_delay": "コマンド間の遅延 (秒)",
+          "spawn_timeout": "プロセス起動タイムアウト (秒)",
+          "pair_timeout": "ペアリングタイムアウト (秒)",
+          "trust_timeout": "信頼タイムアウト (秒)",
+          "scan_duration": "Bluetoothスキャン時間 (秒)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Izaberite Način Podešavanja",
+        "menu_options": {
+          "easy_setup": "Lako Podešavanje",
+          "advanced_setup": "Napredno Podešavanje"
+        }
+      },
+      "easy_setup": {
+        "title": "Lako Podešavanje",
+        "description": "Izaberite svoj medija plejer sa omogućenim Bluetooth-om sa liste. \n(Navedeni su samo uređaji koji se pojavljuju kao Bluetooth medija plejer.)",
+        "data": {
+          "device": "Uređaj"
+        }
+      },
+      "advanced_setup": {
+        "title": "Napredno Podešavanje (Korak: 1/3)",
+        "description": "Izaberite bilo koju entitet medija plejera iz Home Assistant-a.",
+        "data": {
+          "device_id": "Uređaj"
+        }
+      },
+      "mac_address": {
+        "title": "Napredno Podešavanje (Korak: 2/3)",
+        "description": "Unesite Bluetooth MAC adresu za izabrani uređaj.\n(Ako je automatski pronađena, biće unapred popunjena.)",
+        "data": {
+          "mac": "Bluetooth MAC Adresa"
+        }
+      },
+      "settings": {
+        "title": "Napredno Podešavanje (Korak: 3/3)",
+        "description": "Konfigurišite vreme i druge napredne postavke.",
+        "data": {
+          "on_debounce": "Odskok Pri Uključenju (sekunde)",
+          "off_debounce": "Odskok Pri Isključenju (sekunde)",
+          "inter_step_delay": "Kašnjenje Između Komandi (sekunde)",
+          "spawn_timeout": "Vremensko Ograničenje Pokretanja Procesa (sekunde)",
+          "pair_timeout": "Vremensko Ograničenje Uparivanja (sekunde)",
+          "trust_timeout": "Vremensko Ograničenje Poverenja (sekunde)",
+          "scan_duration": "Trajanje Bluetooth Skeniranja (sekunde)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Ovaj uređaj je već konfigurisan.",
+      "no_bt_media_players_found_strict": "Nisu pronađeni Bluetooth medija plejeri. Pokušajte sa metodom Naprednog Podešavanja.",
+      "device_not_found": "Uređaj nije pronađen. Pokušajte ponovo.",
+      "no_media_player_entity_found": "Nije pronađena entitet medija plejera za izabrani uređaj.",
+      "unknown_step": "Došlo je do nepoznate greške. Molimo vas da počnete ispočetka."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Postavke",
+        "description": "Konfigurišite napredne postavke za MiPower prekidač.\n\n**Medija plejer:** {media_player_name}\n**MAC Adresa:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Odskok Pri Uključenju (sekunde)",
+          "off_debounce": "Odskok Pri Isključenju (sekunde)",
+          "inter_step_delay": "Kašnjenje Između Komandi (sekunde)",
+          "spawn_timeout": "Vremensko Ograničenje Pokretanja Procesa (sekunde)",
+          "pair_timeout": "Vremensko Ograničenje Uparivanja (sekunde)",
+          "trust_timeout": "Vremensko Ograničenje Poverenja (sekunde)",
+          "scan_duration": "Trajanje Bluetooth Skeniranja (sekunde)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Tria el Mètode de Configuració",
+        "menu_options": {
+          "easy_setup": "Configuració Fàcil",
+          "advanced_setup": "Configuració Avançada"
+        }
+      },
+      "easy_setup": {
+        "title": "Configuració Fàcil",
+        "description": "Selecciona el teu reproductor multimèdia amb Bluetooth de la llista. \n(Només es mostren els dispositius que apareixen com a reproductors multimèdia Bluetooth.)",
+        "data": {
+          "device": "Dispositiu"
+        }
+      },
+      "advanced_setup": {
+        "title": "Configuració Avançada (Pas: 1/3)",
+        "description": "Selecciona qualsevol entitat de reproductor multimèdia de Home Assistant.",
+        "data": {
+          "device_id": "Dispositiu"
+        }
+      },
+      "mac_address": {
+        "title": "Configuració Avançada (Pas: 2/3)",
+        "description": "Introdueix l'adreça MAC de Bluetooth per al dispositiu seleccionat.\n(Si es troba automàticament, es preomplirà.)",
+        "data": {
+          "mac": "Adreça MAC de Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Configuració Avançada (Pas: 3/3)",
+        "description": "Configura la temporització i altres ajustos avançats.",
+        "data": {
+          "on_debounce": "Desplegament d'Encesa (segons)",
+          "off_debounce": "Desplegament d'Apagat (segons)",
+          "inter_step_delay": "Retard entre Comandes (segons)",
+          "spawn_timeout": "Temps d'Espera d'Inici de Procés (segons)",
+          "pair_timeout": "Temps d'Espera de Vincle (segons)",
+          "trust_timeout": "Temps d'Espera de Confiança (segons)",
+          "scan_duration": "Durada d'Escaneig Bluetooth (segons)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Aquest dispositiu ja està configurat.",
+      "no_bt_media_players_found_strict": "No s'han trobat reproductors multimèdia Bluetooth. Prova el mètode de Configuració Avançada.",
+      "device_not_found": "No s'ha trobat el dispositiu. Torna-ho a provar.",
+      "no_media_player_entity_found": "No s'ha trobat cap entitat de reproductor multimèdia per al dispositiu seleccionat.",
+      "unknown_step": "S'ha produït un error desconegut. Torna a començar."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configuració de MiPower",
+        "description": "Configura els ajustos avançats per a l'interruptor MiPower.\n\n**Reproductor Multimèdia:** {media_player_name}\n**Adreça MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Desplegament d'Encesa (segons)",
+          "off_debounce": "Desplegament d'Apagat (segons)",
+          "inter_step_delay": "Retard entre Comandes (segons)",
+          "spawn_timeout": "Temps d'Espera d'Inici de Procés (segons)",
+          "pair_timeout": "Temps d'Espera de Vincle (segons)",
+          "trust_timeout": "Temps d'Espera de Confiança (segons)",
+          "scan_duration": "Durada d'Escaneig Bluetooth (segons)"
+        }
+      }
+    }
+  }
+}

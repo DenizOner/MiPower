@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Wielt d'Opstellungsmetod",
+        "menu_options": {
+          "easy_setup": "Einfach Opstellung",
+          "advanced_setup": "Erweidert Opstellung"
+        }
+      },
+      "easy_setup": {
+        "title": "Einfach Opstellung",
+        "description": "Wielt Äre Bluetooth-aktivéierte Mediaspiller aus der Lëscht. \n(Nëmmen Apparater déi als Bluetooth Mediaspiller optrieden sinn opgelëscht.)",
+        "data": {
+          "device": "Apparat"
+        }
+      },
+      "advanced_setup": {
+        "title": "Erweidert Opstellung (Schrëtt: 1/3)",
+        "description": "Wielt all Mediaspiller-Entitéit aus Home Assistant.",
+        "data": {
+          "device_id": "Apparat"
+        }
+      },
+      "mac_address": {
+        "title": "Erweidert Opstellung (Schrëtt: 2/3)",
+        "description": "Gitt d'Bluetooth MAC Adress fir de gewielten Apparat an.\n(Wann automatesch fonnt, gëtt dës virgefëllt.)",
+        "data": {
+          "mac": "Bluetooth MAC Adress"
+        }
+      },
+      "settings": {
+        "title": "Erweidert Opstellung (Schrëtt: 3/3)",
+        "description": "Konfiguréiert d'Timing an aner erweidert Astellungen.",
+        "data": {
+          "on_debounce": "Anschalt-Entprellung (Sekonnen)",
+          "off_debounce": "Ausschalt-Entprellung (Sekonnen)",
+          "inter_step_delay": "Verzögerung Tëscht Kommandoen (Sekonnen)",
+          "spawn_timeout": "Prozess Start Timeout (Sekonnen)",
+          "pair_timeout": "Pairen Timeout (Sekonnen)",
+          "trust_timeout": "Vertrauen Timeout (Sekonnen)",
+          "scan_duration": "Bluetooth Scan Dauer (Sekonnen)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Dësen Apparat ass scho konfiguréiert.",
+      "no_bt_media_players_found_strict": "Keng Bluetooth Mediaspiller fonnt. Probéiert déi Erweidert Opstellungsmetod.",
+      "device_not_found": "Apparat net fonnt. Probéiert w.e.g. nach eng Kéier.",
+      "no_media_player_entity_found": "Keng Mediaspiller-Entitéit fonnt fir de gewielten Apparat.",
+      "unknown_step": "En onbekannte Feeler ass opgetrueden. Fänkt w.e.g. erëm un."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Astellungen",
+        "description": "Konfiguréiert déi erweidert Astellunge fir de MiPower Schalter.\n\n**Mediaspiller:** {media_player_name}\n**MAC Adress:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Anschalt-Entprellung (Sekonnen)",
+          "off_debounce": "Ausschalt-Entprellung (Sekonnen)",
+          "inter_step_delay": "Verzögerung Tëscht Kommandoen (Sekonnen)",
+          "spawn_timeout": "Prozess Start Timeout (Sekonnen)",
+          "pair_timeout": "Pairen Timeout (Sekonnen)",
+          "trust_timeout": "Vertrauen Timeout (Sekonnen)",
+          "scan_duration": "Bluetooth Scan Dauer (Sekonnen)"
+        }
+      }
+    }
+  }
+}

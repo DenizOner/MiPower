@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Veldu Uppsetningaraðferð",
+        "menu_options": {
+          "easy_setup": "Einföld Uppsetning",
+          "advanced_setup": "Ítarleg Uppsetning"
+        }
+      },
+      "easy_setup": {
+        "title": "Einföld Uppsetning",
+        "description": "Veldu Bluetooth-virka miðlunarspilarann þinn af listanum. \n(Aðeins tæki sem birtast sem Bluetooth miðlunarspilarar eru skráð.)",
+        "data": {
+          "device": "Tæki"
+        }
+      },
+      "advanced_setup": {
+        "title": "Ítarleg Uppsetning (Skref: 1/3)",
+        "description": "Veldu hvaða miðlunarspilaraeiningu sem er úr Home Assistant.",
+        "data": {
+          "device_id": "Tæki"
+        }
+      },
+      "mac_address": {
+        "title": "Ítarleg Uppsetning (Skref: 2/3)",
+        "description": "Sláðu inn Bluetooth MAC-vistfang fyrir valið tæki.\n(Ef það finnst sjálfkrafa, verður það fyrirfram útfyllt.)",
+        "data": {
+          "mac": "Bluetooth MAC-vistfang"
+        }
+      },
+      "settings": {
+        "title": "Ítarleg Uppsetning (Skref: 3/3)",
+        "description": "Stilltu tímasetningu og aðrar ítarlegar stillingar.",
+        "data": {
+          "on_debounce": "Töf á Kveikingu (sekúndur)",
+          "off_debounce": "Töf á Slökkvun (sekúndur)",
+          "inter_step_delay": "Töf Milli Skipana (sekúndur)",
+          "spawn_timeout": "Tímalokun Ferlisræsingar (sekúndur)",
+          "pair_timeout": "Tímalokun Pörunar (sekúndur)",
+          "trust_timeout": "Tímalokun Trausts (sekúndur)",
+          "scan_duration": "Lengd Bluetooth Skönnunar (sekúndur)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Þetta tæki er þegar uppsett.",
+      "no_bt_media_players_found_strict": "Engir Bluetooth miðlunarspilarar fundust. Reyndu aðferðina Ítarleg Uppsetning.",
+      "device_not_found": "Tæki fannst ekki. Vinsamlegast reyndu aftur.",
+      "no_media_player_entity_found": "Engin miðlunarspilaraeining fannst fyrir valið tæki.",
+      "unknown_step": "Óþekkt villa átti sér stað. Vinsamlegast byrjaðu upp á nýtt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Stillingar",
+        "description": "Stilltu ítarlegar stillingar fyrir MiPower rofann.\n\n**Miðlunarspilari:** {media_player_name}\n**MAC-vistfang:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Töf á Kveikingu (sekúndur)",
+          "off_debounce": "Töf á Slökkvun (sekúndur)",
+          "inter_step_delay": "Töf Milli Skipana (sekúndur)",
+          "spawn_timeout": "Tímalokun Ferlisræsingar (sekúndur)",
+          "pair_timeout": "Tímalokun Pörunar (sekúndur)",
+          "trust_timeout": "Tímalokun Trausts (sekúndur)",
+          "scan_duration": "Lengd Bluetooth Skönnunar (sekúndur)"
+        }
+      }
+    }
+  }
+}

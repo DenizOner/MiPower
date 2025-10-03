@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Pilih Kaedah Persediaan",
+        "menu_options": {
+          "easy_setup": "Persediaan Mudah",
+          "advanced_setup": "Persediaan Lanjutan"
+        }
+      },
+      "easy_setup": {
+        "title": "Persediaan Mudah",
+        "description": "Pilih pemain media yang diaktifkan Bluetooth anda dari senarai. \n(Hanya peranti yang muncul sebagai pemain media Bluetooth disenaraikan.)",
+        "data": {
+          "device": "Peranti"
+        }
+      },
+      "advanced_setup": {
+        "title": "Persediaan Lanjutan (Langkah: 1/3)",
+        "description": "Pilih mana-mana entiti pemain media dari Home Assistant.",
+        "data": {
+          "device_id": "Peranti"
+        }
+      },
+      "mac_address": {
+        "title": "Persediaan Lanjutan (Langkah: 2/3)",
+        "description": "Masukkan alamat MAC Bluetooth untuk peranti yang dipilih.\n(Jika ditemui secara automatik, ia akan diisi terlebih dahulu.)",
+        "data": {
+          "mac": "Alamat MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Persediaan Lanjutan (Langkah: 3/3)",
+        "description": "Konfigurasi masa dan tetapan lanjutan lain.",
+        "data": {
+          "on_debounce": "Debounce Hidup (saat)",
+          "off_debounce": "Debounce Mati (saat)",
+          "inter_step_delay": "Tangguh Antara Perintah (saat)",
+          "spawn_timeout": "Tamat Masa Proses Spawn (saat)",
+          "pair_timeout": "Tamat Masa Berpasangan (saat)",
+          "trust_timeout": "Tamat Masa Kepercayaan (saat)",
+          "scan_duration": "Tempoh Imbasan Bluetooth (saat)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Peranti ini sudah dikonfigurasikan.",
+      "no_bt_media_players_found_strict": "Tiada pemain media Bluetooth ditemui. Cuba kaedah Persediaan Lanjutan.",
+      "device_not_found": "Peranti tidak ditemui. Sila cuba lagi.",
+      "no_media_player_entity_found": "Tiada entiti pemain media ditemui untuk peranti yang dipilih.",
+      "unknown_step": "Ralat yang tidak diketahui berlaku. Sila mulakan semula."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tetapan MiPower",
+        "description": "Konfigurasi tetapan lanjutan untuk suis MiPower.\n\n**Pemain Media:** {media_player_name}\n**Alamat MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Debounce Hidup (saat)",
+          "off_debounce": "Debounce Mati (saat)",
+          "inter_step_delay": "Tangguh Antara Perintah (saat)",
+          "spawn_timeout": "Tamat Masa Proses Spawn (saat)",
+          "pair_timeout": "Tamat Masa Berpasangan (saat)",
+          "trust_timeout": "Tamat Masa Kepercayaan (saat)",
+          "scan_duration": "Tempoh Imbasan Bluetooth (saat)"
+        }
+      }
+    }
+  }
+}

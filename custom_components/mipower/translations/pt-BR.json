@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Escolha o Método de Configuração",
+        "menu_options": {
+          "easy_setup": "Configuração Fácil",
+          "advanced_setup": "Configuração Avançada"
+        }
+      },
+      "easy_setup": {
+        "title": "Configuração Fácil",
+        "description": "Selecione seu reprodutor de mídia habilitado para Bluetooth na lista. \n(Apenas dispositivos que aparecem como reprodutores de mídia Bluetooth estão listados.)",
+        "data": {
+          "device": "Dispositivo"
+        }
+      },
+      "advanced_setup": {
+        "title": "Configuração Avançada (Passo: 1/3)",
+        "description": "Selecione qualquer entidade de reprodutor de mídia do Home Assistant.",
+        "data": {
+          "device_id": "Dispositivo"
+        }
+      },
+      "mac_address": {
+        "title": "Configuração Avançada (Passo: 2/3)",
+        "description": "Digite o endereço MAC Bluetooth para o dispositivo selecionado.\n(Se encontrado automaticamente, será preenchido.)",
+        "data": {
+          "mac": "Endereço MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Configuração Avançada (Passo: 3/3)",
+        "description": "Configure o tempo e outras configurações avançadas.",
+        "data": {
+          "on_debounce": "Antirruído (Debounce) ao Ligar (segundos)",
+          "off_debounce": "Antirruído (Debounce) ao Desligar (segundos)",
+          "inter_step_delay": "Atraso Entre Comandos (segundos)",
+          "spawn_timeout": "Tempo Limite de Criação de Processo (segundos)",
+          "pair_timeout": "Tempo Limite de Pareamento (segundos)",
+          "trust_timeout": "Tempo Limite de Confiança (segundos)",
+          "scan_duration": "Duração da Varredura Bluetooth (segundos)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Este dispositivo já está configurado.",
+      "no_bt_media_players_found_strict": "Nenhum reprodutor de mídia Bluetooth encontrado. Tente o método de Configuração Avançada.",
+      "device_not_found": "Dispositivo não encontrado. Por favor, tente novamente.",
+      "no_media_player_entity_found": "Nenhuma entidade de reprodutor de mídia encontrada para o dispositivo selecionado.",
+      "unknown_step": "Ocorreu um erro desconhecido. Por favor, comece novamente."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configurações do MiPower",
+        "description": "Configure as opções avançadas para o interruptor MiPower.\n\n**Reprodutor de Mídia:** {media_player_name}\n**Endereço MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Antirruído (Debounce) ao Ligar (segundos)",
+          "off_debounce": "Antirruído (Debounce) ao Desligar (segundos)",
+          "inter_step_delay": "Atraso Entre Comandos (segundos)",
+          "spawn_timeout": "Tempo Limite de Criação de Processo (segundos)",
+          "pair_timeout": "Tempo Limite de Pareamento (segundos)",
+          "trust_timeout": "Tempo Limite de Confiança (segundos)",
+          "scan_duration": "Duração da Varredura Bluetooth (segundos)"
+        }
+      }
+    }
+  }
+}

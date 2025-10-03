@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Kurulum Yöntemini Seçin",
+        "menu_options": {
+          "easy_setup": "Kolay Kurulum",
+          "advanced_setup": "Gelişmiş Kurulum"
+        }
+      },
+      "easy_setup": {
+        "title": "Kolay Kurulum",
+        "description": "Listeden Bluetooth özellikli medya oynatıcınızı seçin. \n(Yalnızca Bluetooth medya oynatıcı olarak görünen cihazlar listelenir.)",
+        "data": {
+          "device": "Cihaz"
+        }
+      },
+      "advanced_setup": {
+        "title": "Gelişmiş Kurulum (Adım: 1/3)",
+        "description": "Home Assistant'tan herhangi bir medya oynatıcı varlığı seçin.",
+        "data": {
+          "device_id": "Cihaz"
+        }
+      },
+      "mac_address": {
+        "title": "Gelişmiş Kurulum (Adım: 2/3)",
+        "description": "Seçilen cihaz için Bluetooth MAC adresini girin.\n(Otomatik olarak bulunursa, önceden doldurulacaktır.)",
+        "data": {
+          "mac": "Bluetooth MAC Adresi"
+        }
+      },
+      "settings": {
+        "title": "Gelişmiş Kurulum (Adım: 3/3)",
+        "description": "Zamanlama ve diğer gelişmiş ayarları yapılandırın.",
+        "data": {
+          "on_debounce": "Açma Gecikmesi (saniye)",
+          "off_debounce": "Kapatma Gecikmesi (saniye)",
+          "inter_step_delay": "Komutlar Arası Gecikme (saniye)",
+          "spawn_timeout": "İşlem Oluşturma Zaman Aşımı (saniye)",
+          "pair_timeout": "Eşleştirme Zaman Aşımı (saniye)",
+          "trust_timeout": "Güven Zaman Aşımı (saniye)",
+          "scan_duration": "Bluetooth Tarama Süresi (saniye)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Bu cihaz zaten yapılandırılmış.",
+      "no_bt_media_players_found_strict": "Hiçbir Bluetooth medya oynatıcı bulunamadı. Gelişmiş Kurulum yöntemini deneyin.",
+      "device_not_found": "Cihaz bulunamadı. Lütfen tekrar deneyin.",
+      "no_media_player_entity_found": "Seçilen cihaz için medya oynatıcı varlığı bulunamadı.",
+      "unknown_step": "Bilinmeyen bir hata oluştu. Lütfen baştan başlayın."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Ayarları",
+        "description": "MiPower anahtarı için gelişmiş ayarları yapılandırın.\n\n**Medya Oynatıcı:** {media_player_name}\n**MAC Adresi:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Açma Gecikmesi (saniye)",
+          "off_debounce": "Kapatma Gecikmesi (saniye)",
+          "inter_step_delay": "Komutlar Arası Gecikme (saniye)",
+          "spawn_timeout": "İşlem Oluşturma Zaman Aşımı (saniye)",
+          "pair_timeout": "Eşleştirme Zaman Aşımı (saniye)",
+          "trust_timeout": "Güven Zaman Aşımı (saniye)",
+          "scan_duration": "Bluetooth Tarama Süresi (saniye)"
+        }
+      }
+    }
+  }
+}

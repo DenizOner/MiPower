@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Válasszon Beállítási Módszert",
+        "menu_options": {
+          "easy_setup": "Egyszerű Beállítás",
+          "advanced_setup": "Haladó Beállítás"
+        }
+      },
+      "easy_setup": {
+        "title": "Egyszerű Beállítás",
+        "description": "Válassza ki Bluetooth-kompatibilis médialejátszóját a listából. \n(Csak azok az eszközök szerepelnek a listán, amelyek Bluetooth médialejátszóként jelennek meg.)",
+        "data": {
+          "device": "Eszköz"
+        }
+      },
+      "advanced_setup": {
+        "title": "Haladó Beállítás (Lépés: 1/3)",
+        "description": "Válasszon ki bármely médialejátszó entitást a Home Assistantból.",
+        "data": {
+          "device_id": "Eszköz"
+        }
+      },
+      "mac_address": {
+        "title": "Haladó Beállítás (Lépés: 2/3)",
+        "description": "Adja meg a kiválasztott eszköz Bluetooth MAC-címét.\n(Ha automatikusan megtalálható, előre ki lesz töltve.)",
+        "data": {
+          "mac": "Bluetooth MAC-cím"
+        }
+      },
+      "settings": {
+        "title": "Haladó Beállítás (Lépés: 3/3)",
+        "description": "Konfigurálja az időzítést és egyéb haladó beállításokat.",
+        "data": {
+          "on_debounce": "Bekapcsolási Késleltetés (másodperc)",
+          "off_debounce": "Kikapcsolási Késleltetés (másodperc)",
+          "inter_step_delay": "Késleltetés Parancsok Között (másodperc)",
+          "spawn_timeout": "Folyamat Indítási Időtúllépés (másodperc)",
+          "pair_timeout": "Párosítási Időtúllépés (másodperc)",
+          "trust_timeout": "Bizalmi Időtúllépés (másodperc)",
+          "scan_duration": "Bluetooth Szkennelés Időtartama (másodperc)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Ez az eszköz már konfigurálva van.",
+      "no_bt_media_players_found_strict": "Nem találhatók Bluetooth médialejátszók. Próbálja meg a Haladó Beállítás módszert.",
+      "device_not_found": "Az eszköz nem található. Kérem, próbálja újra.",
+      "no_media_player_entity_found": "Nem található médialejátszó entitás a kiválasztott eszközhöz.",
+      "unknown_step": "Ismeretlen hiba történt. Kérem, kezdje elölről."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Beállítások",
+        "description": "Konfigurálja a MiPower kapcsoló haladó beállításait.\n\n**Médialejátszó:** {media_player_name}\n**MAC-cím:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Bekapcsolási Késleltetés (másodperc)",
+          "off_debounce": "Kikapcsolási Késleltetés (másodperc)",
+          "inter_step_delay": "Késleltetés Parancsok Között (másodperc)",
+          "spawn_timeout": "Folyamat Indítási Időtúllépés (másodperc)",
+          "pair_timeout": "Párosítási Időtúllépés (másodperc)",
+          "trust_timeout": "Bizalmi Időtúllépés (másodperc)",
+          "scan_duration": "Bluetooth Szkennelés Időtartama (másodperc)"
+        }
+      }
+    }
+  }
+}

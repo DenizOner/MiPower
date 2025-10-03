@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Vælg Opsætningsmetode",
+        "menu_options": {
+          "easy_setup": "Nem Opsætning",
+          "advanced_setup": "Avanceret Opsætning"
+        }
+      },
+      "easy_setup": {
+        "title": "Nem Opsætning",
+        "description": "Vælg din Bluetooth-aktiverede medieafspiller fra listen. \n(Kun enheder, der vises som Bluetooth medieafspillere, er angivet.)",
+        "data": {
+          "device": "Enhed"
+        }
+      },
+      "advanced_setup": {
+        "title": "Avanceret Opsætning (Trin: 1/3)",
+        "description": "Vælg en hvilken som helst medieafspiller-entitet fra Home Assistant.",
+        "data": {
+          "device_id": "Enhed"
+        }
+      },
+      "mac_address": {
+        "title": "Avanceret Opsætning (Trin: 2/3)",
+        "description": "Indtast Bluetooth MAC-adressen for den valgte enhed.\n(Hvis den findes automatisk, udfyldes den på forhånd.)",
+        "data": {
+          "mac": "Bluetooth MAC-adresse"
+        }
+      },
+      "settings": {
+        "title": "Avanceret Opsætning (Trin: 3/3)",
+        "description": "Konfigurer timing og andre avancerede indstillinger.",
+        "data": {
+          "on_debounce": "Tændingsforsinkelse (sekunder)",
+          "off_debounce": "Slukningsforsinkelse (sekunder)",
+          "inter_step_delay": "Forsinkelse mellem kommandoer (sekunder)",
+          "spawn_timeout": "Timeout for Processtart (sekunder)",
+          "pair_timeout": "Timeout for Parring (sekunder)",
+          "trust_timeout": "Timeout for Tillid (sekunder)",
+          "scan_duration": "Varighed af Bluetooth-scanning (sekunder)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Denne enhed er allerede konfigureret.",
+      "no_bt_media_players_found_strict": "Ingen Bluetooth medieafspillere fundet. Prøv metoden Avanceret Opsætning.",
+      "device_not_found": "Enhed ikke fundet. Prøv venligst igen.",
+      "no_media_player_entity_found": "Ingen medieafspiller-entitet fundet for den valgte enhed.",
+      "unknown_step": "Der opstod en ukendt fejl. Start venligst forfra."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Indstillinger",
+        "description": "Konfigurer avancerede indstillinger for MiPower-kontakten.\n\n**Medieafspiller:** {media_player_name}\n**MAC-adresse:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Tændingsforsinkelse (sekunder)",
+          "off_debounce": "Slukningsforsinkelse (sekunder)",
+          "inter_step_delay": "Forsinkelse mellem kommandoer (sekunder)",
+          "spawn_timeout": "Timeout for Processtart (sekunder)",
+          "pair_timeout": "Timeout for Parring (sekunder)",
+          "trust_timeout": "Timeout for Tillid (sekunder)",
+          "scan_duration": "Varighed af Bluetooth-scanning (sekunder)"
+        }
+      }
+    }
+  }
+}

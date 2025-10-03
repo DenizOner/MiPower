@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Roghnaigh Modh Socraithe",
+        "menu_options": {
+          "easy_setup": "Socrú Éasca",
+          "advanced_setup": "Socrú Casta"
+        }
+      },
+      "easy_setup": {
+        "title": "Socrú Éasca",
+        "description": "Roghnaigh do sheinnteoir meán le cumas Bluetooth ón liosta. \n(Níl ach gléasanna atá le feiceáil mar sheinnteoirí meán Bluetooth liostaithe.)",
+        "data": {
+          "device": "Gléas"
+        }
+      },
+      "advanced_setup": {
+        "title": "Socrú Casta (Céim: 1/3)",
+        "description": "Roghnaigh aon eintiteas seinnteoir meán ó Home Assistant.",
+        "data": {
+          "device_id": "Gléas"
+        }
+      },
+      "mac_address": {
+        "title": "Socrú Casta (Céim: 2/3)",
+        "description": "Iontráil an seoladh MAC Bluetooth don ghléas roghnaithe.\n(Má aimsítear go huathoibríoch é, beidh sé réamhlíonta.)",
+        "data": {
+          "mac": "Seoladh MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Socrú Casta (Céim: 3/3)",
+        "description": "Cumraigh an t-am agus socruithe casta eile.",
+        "data": {
+          "on_debounce": "Moill ar Chumasú (soicind)",
+          "off_debounce": "Moill ar Dhíchumasú (soicind)",
+          "inter_step_delay": "Moill Idir Orduithe (soicind)",
+          "spawn_timeout": "Tréimhse Ama Spleachais Próisis (soicind)",
+          "pair_timeout": "Tréimhse Ama Péireála (soicind)",
+          "trust_timeout": "Tréimhse Ama Iontaobhais (soicind)",
+          "scan_duration": "Fad Scanadh Bluetooth (soicind)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Tá an gléas seo cumraithe cheana féin.",
+      "no_bt_media_players_found_strict": "Níor aimsíodh aon seinnteoirí meán Bluetooth. Bain triail as an modh Socraithe Casta.",
+      "device_not_found": "Níor aimsíodh gléas. Bain triail eile as, le do thoil.",
+      "no_media_player_entity_found": "Níor aimsíodh aon eintiteas seinnteoir meán don ghléas roghnaithe.",
+      "unknown_step": "Tharla earráid anaithnid. Tosaigh arís, le do thoil."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Socruithe MiPower",
+        "description": "Cumraigh socruithe casta don lasc MiPower.\n\n**Seinnteoir Meán:** {media_player_name}\n**Seoladh MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Moill ar Chumasú (soicind)",
+          "off_debounce": "Moill ar Dhíchumasú (soicind)",
+          "inter_step_delay": "Moill Idir Orduithe (soicind)",
+          "spawn_timeout": "Tréimhse Ama Spleachais Próisis (soicind)",
+          "pair_timeout": "Tréimhse Ama Péireála (soicind)",
+          "trust_timeout": "Tréimhse Ama Iontaobhais (soicind)",
+          "scan_duration": "Fad Scanadh Bluetooth (soicind)"
+        }
+      }
+    }
+  }
+}

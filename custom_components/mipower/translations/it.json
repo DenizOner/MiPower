@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Scegli il Metodo di Configurazione",
+        "menu_options": {
+          "easy_setup": "Configurazione Facile",
+          "advanced_setup": "Configurazione Avanzata"
+        }
+      },
+      "easy_setup": {
+        "title": "Configurazione Facile",
+        "description": "Seleziona il tuo lettore multimediale abilitato Bluetooth dall'elenco. \n(Vengono elencati solo i dispositivi che appaiono come lettori multimediali Bluetooth.)",
+        "data": {
+          "device": "Dispositivo"
+        }
+      },
+      "advanced_setup": {
+        "title": "Configurazione Avanzata (Passo: 1/3)",
+        "description": "Seleziona qualsiasi entità di lettore multimediale da Home Assistant.",
+        "data": {
+          "device_id": "Dispositivo"
+        }
+      },
+      "mac_address": {
+        "title": "Configurazione Avanzata (Passo: 2/3)",
+        "description": "Inserisci l'indirizzo MAC Bluetooth per il dispositivo selezionato.\n(Se trovato automaticamente, verrà precompilato.)",
+        "data": {
+          "mac": "Indirizzo MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Configurazione Avanzata (Passo: 3/3)",
+        "description": "Configura la temporizzazione e altre impostazioni avanzate.",
+        "data": {
+          "on_debounce": "Debounce di Accensione (secondi)",
+          "off_debounce": "Debounce di Spegnimento (secondi)",
+          "inter_step_delay": "Ritardo Tra i Comandi (secondi)",
+          "spawn_timeout": "Timeout di Avvio Processo (secondi)",
+          "pair_timeout": "Timeout di Accoppiamento (secondi)",
+          "trust_timeout": "Timeout di Fiducia (secondi)",
+          "scan_duration": "Durata Scansione Bluetooth (secondi)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Questo dispositivo è già configurato.",
+      "no_bt_media_players_found_strict": "Nessun lettore multimediale Bluetooth trovato. Prova il metodo di Configurazione Avanzata.",
+      "device_not_found": "Dispositivo non trovato. Riprova per favore.",
+      "no_media_player_entity_found": "Nessuna entità di lettore multimediale trovata per il dispositivo selezionato.",
+      "unknown_step": "Si è verificato un errore sconosciuto. Ritorna all'inizio."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Impostazioni MiPower",
+        "description": "Configura le impostazioni avanzate per l'interruttore MiPower.\n\n**Lettore Multimediale:** {media_player_name}\n**Indirizzo MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Debounce di Accensione (secondi)",
+          "off_debounce": "Debounce di Spegnimento (secondi)",
+          "inter_step_delay": "Ritardo Tra i Comandi (secondi)",
+          "spawn_timeout": "Timeout di Avvio Processo (secondi)",
+          "pair_timeout": "Timeout di Accoppiamento (secondi)",
+          "trust_timeout": "Timeout di Fiducia (secondi)",
+          "scan_duration": "Durata Scansione Bluetooth (secondi)"
+        }
+      }
+    }
+  }
+}

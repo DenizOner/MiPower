@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "选择设置方法",
+        "menu_options": {
+          "easy_setup": "简易设置",
+          "advanced_setup": "高级设置"
+        }
+      },
+      "easy_setup": {
+        "title": "简易设置",
+        "description": "从列表中选择支持蓝牙的媒体播放器。 \n(仅列出显示为蓝牙媒体播放器的设备。)",
+        "data": {
+          "device": "设备"
+        }
+      },
+      "advanced_setup": {
+        "title": "高级设置 (步骤: 1/3)",
+        "description": "从 Home Assistant 中选择任何媒体播放器实体。",
+        "data": {
+          "device_id": "设备"
+        }
+      },
+      "mac_address": {
+        "title": "高级设置 (步骤: 2/3)",
+        "description": "输入所选设备的蓝牙 MAC 地址。\n(如果自动找到，将预先填入。)",
+        "data": {
+          "mac": "蓝牙 MAC 地址"
+        }
+      },
+      "settings": {
+        "title": "高级设置 (步骤: 3/3)",
+        "description": "配置时间和其他高级设置。",
+        "data": {
+          "on_debounce": "开启去抖动时间 (秒)",
+          "off_debounce": "关闭去抖动时间 (秒)",
+          "inter_step_delay": "命令间隔延迟 (秒)",
+          "spawn_timeout": "进程生成超时 (秒)",
+          "pair_timeout": "配对超时 (秒)",
+          "trust_timeout": "信任超时 (秒)",
+          "scan_duration": "蓝牙扫描持续时间 (秒)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "此设备已配置。",
+      "no_bt_media_players_found_strict": "未找到蓝牙媒体播放器。请尝试高级设置方法。",
+      "device_not_found": "未找到设备。请重试。",
+      "no_media_player_entity_found": "未找到所选设备的媒体播放器实体。",
+      "unknown_step": "发生未知错误。请重新开始。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower 设置",
+        "description": "配置 MiPower 开关的高级设置。\n\n**媒体播放器:** {media_player_name}\n**MAC 地址:** {mac_address}\n",
+        "data": {
+          "on_debounce": "开启去抖动时间 (秒)",
+          "off_debounce": "关闭去抖动时间 (秒)",
+          "inter_step_delay": "命令间隔延迟 (秒)",
+          "spawn_timeout": "进程生成超时 (秒)",
+          "pair_timeout": "配对超时 (秒)",
+          "trust_timeout": "信任超时 (秒)",
+          "scan_duration": "蓝牙扫描持续时间 (秒)"
+        }
+      }
+    }
+  }
+}

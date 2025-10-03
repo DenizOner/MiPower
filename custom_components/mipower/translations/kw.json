@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Dewis Fordh Formyans",
+        "menu_options": {
+          "easy_setup": "Formyans Esel",
+          "advanced_setup": "Formyans Avansek"
+        }
+      },
+      "easy_setup": {
+        "title": "Formyans Esel",
+        "description": "Dewis agas gwarior media gans Bluetooth dhiworth an rol. \n(Yma rol saw rag devisow a omdhiskwedh avel gwarioryon media Bluetooth.)",
+        "data": {
+          "device": "Devis"
+        }
+      },
+      "advanced_setup": {
+        "title": "Formyans Avansek (Kamm: 1/3)",
+        "description": "Dewis 'entity' gwarior media dhiworth Home Assistant.",
+        "data": {
+          "device_id": "Devis"
+        }
+      },
+      "mac_address": {
+        "title": "Formyans Avansek (Kamm: 2/3)",
+        "description": "Entra an Adress MAC Bluetooth rag an devis dewisys.\n(Mar yw kavos awtomatek, y fydh leunheys a-rag.)",
+        "data": {
+          "mac": "Adress MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Formyans Avansek (Kamm: 3/3)",
+        "description": "Keflun termyn ha 'settings' avansek erel.",
+        "data": {
+          "on_debounce": "Debounce a-dro dhe Wreydh (sekondow)",
+          "off_debounce": "Debounce a-dro dhe Dhiwreydh (sekondow)",
+          "inter_step_delay": "Dalleth Yntra Gwirvosow (sekondow)",
+          "spawn_timeout": "Termyn Hedh Gwrians Prosses (sekondow)",
+          "pair_timeout": "Termyn Hedh Kowetha (sekondow)",
+          "trust_timeout": "Termyn Hedh Trygva (sekondow)",
+          "scan_duration": "Spys Skanna Bluetooth (sekondow)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Yma an devis ma keflunyes seulabrys.",
+      "no_bt_media_players_found_strict": "Nyns eus gwarioryon media Bluetooth kavos. Preja an fordh Formyans Avansek.",
+      "device_not_found": "Devis nyns yw kavos. Preja arta, mar pleg.",
+      "no_media_player_entity_found": "Nyns eus 'entity' gwarior media kavos rag an devis dewisys.",
+      "unknown_step": "Hanter-fowt anesav a hwarva. Dalleth arta, mar pleg."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Settings MiPower",
+        "description": "Keflun 'settings' avansek rag an chanj MiPower.\n\n**Gwarior Media:** {media_player_name}\n**Adress MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Debounce a-dro dhe Wreydh (sekondow)",
+          "off_debounce": "Debounce a-dro dhe Dhiwreydh (sekondow)",
+          "inter_step_delay": "Dalleth Yntra Gwirvosow (sekondow)",
+          "spawn_timeout": "Termyn Hedh Gwrians Prosses (sekondow)",
+          "pair_timeout": "Termyn Hedh Kowetha (sekondow)",
+          "trust_timeout": "Termyn Hedh Trygva (sekondow)",
+          "scan_duration": "Spys Skanna Bluetooth (sekondow)"
+        }
+      }
+    }
+  }
+}

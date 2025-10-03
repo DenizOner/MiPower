@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Välj Inställningsmetod",
+        "menu_options": {
+          "easy_setup": "Enkel Inställning",
+          "advanced_setup": "Avancerad Inställning"
+        }
+      },
+      "easy_setup": {
+        "title": "Enkel Inställning",
+        "description": "Välj din Bluetooth-aktiverade mediaspelare från listan. \n(Endast enheter som visas som Bluetooth mediaspelare listas.)",
+        "data": {
+          "device": "Enhet"
+        }
+      },
+      "advanced_setup": {
+        "title": "Avancerad Inställning (Steg: 1/3)",
+        "description": "Välj valfri mediaspelar-entitet från Home Assistant.",
+        "data": {
+          "device_id": "Enhet"
+        }
+      },
+      "mac_address": {
+        "title": "Avancerad Inställning (Steg: 2/3)",
+        "description": "Ange Bluetooth MAC-adressen för den valda enheten.\n(Om den hittas automatiskt, kommer den att fyllas i i förväg.)",
+        "data": {
+          "mac": "Bluetooth MAC-adress"
+        }
+      },
+      "settings": {
+        "title": "Avancerad Inställning (Steg: 3/3)",
+        "description": "Konfigurera tidshantering och andra avancerade inställningar.",
+        "data": {
+          "on_debounce": "Slå-På Fördröjning (sekunder)",
+          "off_debounce": "Slå-Av Fördröjning (sekunder)",
+          "inter_step_delay": "Fördröjning Mellan Kommandon (sekunder)",
+          "spawn_timeout": "Tidsgräns för Processstart (sekunder)",
+          "pair_timeout": "Tidsgräns för Parning (sekunder)",
+          "trust_timeout": "Tidsgräns för Förtroende (sekunder)",
+          "scan_duration": "Varaktighet för Bluetooth-skanning (sekunder)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Denna enhet är redan konfigurerad.",
+      "no_bt_media_players_found_strict": "Inga Bluetooth mediaspelare hittades. Prova metoden Avancerad Inställning.",
+      "device_not_found": "Enhet hittades inte. Försök igen.",
+      "no_media_player_entity_found": "Ingen mediaspelar-entitet hittades för den valda enheten.",
+      "unknown_step": "Ett okänt fel uppstod. Vänligen börja om."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Inställningar",
+        "description": "Konfigurera avancerade inställningar för MiPower-omkopplaren.\n\n**Mediaspelare:** {media_player_name}\n**MAC-adress:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Slå-På Fördröjning (sekunder)",
+          "off_debounce": "Slå-Av Fördröjning (sekunder)",
+          "inter_step_delay": "Fördröjning Mellan Kommandon (sekunder)",
+          "spawn_timeout": "Tidsgräns för Processstart (sekunder)",
+          "pair_timeout": "Tidsgräns för Parning (sekunder)",
+          "trust_timeout": "Tidsgräns för Förtroende (sekunder)",
+          "scan_duration": "Varaktighet för Bluetooth-skanning (sekunder)"
+        }
+      }
+    }
+  }
+}

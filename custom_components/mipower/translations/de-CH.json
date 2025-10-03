@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Setup-Methode wähle",
+        "menu_options": {
+          "easy_setup": "Eifachs Setup",
+          "advanced_setup": "Erwiiterets Setup"
+        }
+      },
+      "easy_setup": {
+        "title": "Eifachs Setup",
+        "description": "Wähle din Bluetooth-fähige Media Player us de Liischte. \n(Nur Gerät, wo als Bluetooth Media Player uuftauche, sind ufgleischtet.)",
+        "data": {
+          "device": "Gerät"
+        }
+      },
+      "advanced_setup": {
+        "title": "Erwiiterets Setup (Schritt: 1/3)",
+        "description": "Wähle en beliebige Media Player Entity us Home Assistant.",
+        "data": {
+          "device_id": "Gerät"
+        }
+      },
+      "mac_address": {
+        "title": "Erwiiterets Setup (Schritt: 2/3)",
+        "description": "Gimer d'Bluetooth MAC Adrässe für s'gwählti Gerät i.\n(Wänn's automatisch gfunde wird, isch's scho uusgfüllt.)",
+        "data": {
+          "mac": "Bluetooth MAC Adrässe"
+        }
+      },
+      "settings": {
+        "title": "Erwiiterets Setup (Schritt: 3/3)",
+        "description": "Konfiguriere s'Timing und anderi erwiitereti Iistellige.",
+        "data": {
+          "on_debounce": "Yyschalt-Debounce (Sekunde)",
+          "off_debounce": "Uusschalt-Debounce (Sekunde)",
+          "inter_step_delay": "Verzögerig zwüsche Befähl (Sekunde)",
+          "spawn_timeout": "Prozess-Start-Timeout (Sekunde)",
+          "pair_timeout": "Koppligs-Timeout (Sekunde)",
+          "trust_timeout": "Vertrauens-Timeout (Sekunde)",
+          "scan_duration": "Bluetooth Scan-Dauer (Sekunde)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "S'Gerät isch scho konfiguriert.",
+      "no_bt_media_players_found_strict": "Kei Bluetooth Media Player gfunde. Versuech d'Methode 'Erwiiterets Setup'.",
+      "device_not_found": "Gerät nöd gfunde. Versuech's bitte nomal.",
+      "no_media_player_entity_found": "Kei Media Player Entity für s'gwählti Gerät gfunde.",
+      "unknown_step": "En unbekannte Fähler isch uufträte. Fang bitte wieder vo vorne aa."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Iistellige",
+        "description": "Konfiguriere erwiitereti Iistellige für de MiPower-Schalter.\n\n**Media Player:** {media_player_name}\n**MAC Adrässe:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Yyschalt-Debounce (Sekunde)",
+          "off_debounce": "Uusschalt-Debounce (Sekunde)",
+          "inter_step_delay": "Verzögerig zwüsche Befähl (Sekunde)",
+          "spawn_timeout": "Prozess-Start-Timeout (Sekunde)",
+          "pair_timeout": "Koppligs-Timeout (Sekunde)",
+          "trust_timeout": "Vertrauens-Timeout (Sekunde)",
+          "scan_duration": "Bluetooth Scan-Dauer (Sekunde)"
+        }
+      }
+    }
+  }
+}

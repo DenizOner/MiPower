@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "選擇設定方式",
+        "menu_options": {
+          "easy_setup": "簡易設定",
+          "advanced_setup": "進階設定"
+        }
+      },
+      "easy_setup": {
+        "title": "簡易設定",
+        "description": "請從列表中選取您的藍牙媒體播放器。 \n(僅列出顯示為藍牙媒體播放器的裝置。)",
+        "data": {
+          "device": "裝置"
+        }
+      },
+      "advanced_setup": {
+        "title": "進階設定 (步驟: 1/3)",
+        "description": "請從 Home Assistant 中選取任何媒體播放器實體。",
+        "data": {
+          "device_id": "裝置"
+        }
+      },
+      "mac_address": {
+        "title": "進階設定 (步驟: 2/3)",
+        "description": "請輸入所選裝置的藍牙 MAC 位址。\n(如果自動找到，將會預先填入。)",
+        "data": {
+          "mac": "藍牙 MAC 位址"
+        }
+      },
+      "settings": {
+        "title": "進階設定 (步驟: 3/3)",
+        "description": "配置時間和其他進階設定。",
+        "data": {
+          "on_debounce": "開啟去抖動時間 (秒)",
+          "off_debounce": "關閉去抖動時間 (秒)",
+          "inter_step_delay": "指令間隔延遲 (秒)",
+          "spawn_timeout": "程序生成逾時 (秒)",
+          "pair_timeout": "配對逾時 (秒)",
+          "trust_timeout": "信任逾時 (秒)",
+          "scan_duration": "藍牙掃描持續時間 (秒)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "此裝置已設定。",
+      "no_bt_media_players_found_strict": "未找到任何藍牙媒體播放器。請嘗試進階設定方式。",
+      "device_not_found": "未找到裝置。請再試一次。",
+      "no_media_player_entity_found": "未找到所選裝置的媒體播放器實體。",
+      "unknown_step": "發生不明錯誤。請重新開始。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower 設定",
+        "description": "配置 MiPower 開關的進階設定。\n\n**媒體播放器:** {media_player_name}\n**MAC 位址:** {mac_address}\n",
+        "data": {
+          "on_debounce": "開啟去抖動時間 (秒)",
+          "off_debounce": "關閉去抖動時間 (秒)",
+          "inter_step_delay": "指令間隔延遲 (秒)",
+          "spawn_timeout": "程序生成逾時 (秒)",
+          "pair_timeout": "配對逾時 (秒)",
+          "trust_timeout": "信任逾時 (秒)",
+          "scan_duration": "藍牙掃描持續時間 (秒)"
+        }
+      }
+    }
+  }
+}

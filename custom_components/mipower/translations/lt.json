@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Pasirinkite Nustatymo Metodą",
+        "menu_options": {
+          "easy_setup": "Paprastas Nustatymas",
+          "advanced_setup": "Išplėstinis Nustatymas"
+        }
+      },
+      "easy_setup": {
+        "title": "Paprastas Nustatymas",
+        "description": "Pasirinkite savo „Bluetooth“ palaikantį medijos grotuvą iš sąrašo. \n(Nurodyti tik tie įrenginiai, kurie rodomi kaip „Bluetooth“ medijos grotuvai.)",
+        "data": {
+          "device": "Įrenginys"
+        }
+      },
+      "advanced_setup": {
+        "title": "Išplėstinis Nustatymas (Žingsnis: 1/3)",
+        "description": "Pasirinkite bet kurią medijos grotuvo esmę iš „Home Assistant“.",
+        "data": {
+          "device_id": "Įrenginys"
+        }
+      },
+      "mac_address": {
+        "title": "Išplėstinis Nustatymas (Žingsnis: 2/3)",
+        "description": "Įveskite pasirinkto įrenginio „Bluetooth“ MAC adresą.\n(Jei randamas automatiškai, bus užpildytas iš anksto.)",
+        "data": {
+          "mac": "Bluetooth MAC Adresas"
+        }
+      },
+      "settings": {
+        "title": "Išplėstinis Nustatymas (Žingsnis: 3/3)",
+        "description": "Konfigūruokite laiką ir kitus išplėstinius nustatymus.",
+        "data": {
+          "on_debounce": "Įjungimo Vėlavimas (sekundės)",
+          "off_debounce": "Išjungimo Vėlavimas (sekundės)",
+          "inter_step_delay": "Vėlavimas Tarp Komandų (sekundės)",
+          "spawn_timeout": "Proceso Paleidimo Laiko Limitas (sekundės)",
+          "pair_timeout": "Susiejimo Laiko Limitas (sekundės)",
+          "trust_timeout": "Pasitikėjimo Laiko Limitas (sekundės)",
+          "scan_duration": "Bluetooth Nuskaitymo Trukmė (sekundės)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Šis įrenginys jau sukonfigūruotas.",
+      "no_bt_media_players_found_strict": "„Bluetooth“ medijos grotuvų nerasta. Išbandykite Išplėstinio Nustatymo metodą.",
+      "device_not_found": "Įrenginys nerastas. Bandykite dar kartą.",
+      "no_media_player_entity_found": "Nepasirinkto įrenginio medijos grotuvo esmė nerasta.",
+      "unknown_step": "Įvyko nežinoma klaida. Prašome pradėti iš naujo."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Nustatymai",
+        "description": "Konfigūruokite išplėstinius nustatymus MiPower jungikliui.\n\n**Medijos Grotuvas:** {media_player_name}\n**MAC Adresas:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Įjungimo Vėlavimas (sekundės)",
+          "off_debounce": "Išjungimo Vėlavimas (sekundės)",
+          "inter_step_delay": "Vėlavimas Tarp Komandų (sekundės)",
+          "spawn_timeout": "Proceso Paleidimo Laiko Limitas (sekundės)",
+          "pair_timeout": "Susiejimo Laiko Limitas (sekundės)",
+          "trust_timeout": "Pasitikėjimo Laiko Limitas (sekundės)",
+          "scan_duration": "Bluetooth Nuskaitymo Trukmė (sekundės)"
+        }
+      }
+    }
+  }
+}

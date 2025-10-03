@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Aukeratu Konfigurazio Metodoa",
+        "menu_options": {
+          "easy_setup": "Konfigurazio Erraza",
+          "advanced_setup": "Konfigurazio Aurreratua"
+        }
+      },
+      "easy_setup": {
+        "title": "Konfigurazio Erraza",
+        "description": "Aukeratu Bluetooth-a gaituta duen zure multimedia erreproduzitzailea zerrendatik. \n(Bluetooth multimedia erreproduzitzaile gisa agertzen diren gailuak soilik zerrendatzen dira.)",
+        "data": {
+          "device": "Gailua"
+        }
+      },
+      "advanced_setup": {
+        "title": "Konfigurazio Aurreratua (Urratsera: 1/3)",
+        "description": "Aukeratu edozein multimedia erreproduzitzaile entitate Home Assistantetik.",
+        "data": {
+          "device_id": "Gailua"
+        }
+      },
+      "mac_address": {
+        "title": "Konfigurazio Aurreratua (Urratsera: 2/3)",
+        "description": "Sartu hautatutako gailuaren Bluetooth MAC helbidea.\n(Automatikoki aurkitzen bada, aurrez beteko da.)",
+        "data": {
+          "mac": "Bluetooth MAC Helbidea"
+        }
+      },
+      "settings": {
+        "title": "Konfigurazio Aurreratua (Urratsera: 3/3)",
+        "description": "Konfiguratu denbora eta beste ezarpen aurreratu batzuk.",
+        "data": {
+          "on_debounce": "Pizteko Debounce (segundo)",
+          "off_debounce": "Itzaltzeko Debounce (segundo)",
+          "inter_step_delay": "Atzerapena Aginduen Artean (segundo)",
+          "spawn_timeout": "Prozesuaren Sorkuntzaren Denbora-muga (segundo)",
+          "pair_timeout": "Parekatzearen Denbora-muga (segundo)",
+          "trust_timeout": "Konfiantzaren Denbora-muga (segundo)",
+          "scan_duration": "Bluetooth Eskaneatzearen Iraupena (segundo)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Gailu hau dagoeneko konfiguratuta dago.",
+      "no_bt_media_players_found_strict": "Ez da Bluetooth multimedia erreproduzitzailerik aurkitu. Saiatu Konfigurazio Aurreratuko metodoa.",
+      "device_not_found": "Ez da gailua aurkitu. Mesedez, saiatu berriro.",
+      "no_media_player_entity_found": "Ez da multimedia erreproduzitzaile entitaterik aurkitu hautatutako gailurako.",
+      "unknown_step": "Errore ezezagun bat gertatu da. Mesedez, hasi berriro."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Ezarpenak",
+        "description": "Konfiguratu MiPower etengailuaren ezarpen aurreratuak.\n\n**Multimedia Erreproduzitzailea:** {media_player_name}\n**MAC Helbidea:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Pizteko Debounce (segundo)",
+          "off_debounce": "Itzaltzeko Debounce (segundo)",
+          "inter_step_delay": "Atzerapena Aginduen Artean (segundo)",
+          "spawn_timeout": "Prozesuaren Sorkuntzaren Denbora-muga (segundo)",
+          "pair_timeout": "Parekatzearen Denbora-muga (segundo)",
+          "trust_timeout": "Konfiantzaren Denbora-muga (segundo)",
+          "scan_duration": "Bluetooth Eskaneatzearen Iraupena (segundo)"
+        }
+      }
+    }
+  }
+}

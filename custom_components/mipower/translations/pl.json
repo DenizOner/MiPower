@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Wybierz Metodę Konfiguracji",
+        "menu_options": {
+          "easy_setup": "Łatwa Konfiguracja",
+          "advanced_setup": "Zaawansowana Konfiguracja"
+        }
+      },
+      "easy_setup": {
+        "title": "Łatwa Konfiguracja",
+        "description": "Wybierz z listy odtwarzacz multimedialny obsługujący technologię Bluetooth. \n(Wyświetlane są tylko urządzenia, które pojawiają się jako odtwarzacze multimedialne Bluetooth.)",
+        "data": {
+          "device": "Urządzenie"
+        }
+      },
+      "advanced_setup": {
+        "title": "Zaawansowana Konfiguracja (Krok: 1/3)",
+        "description": "Wybierz dowolną encję odtwarzacza multimedialnego z Home Assistant.",
+        "data": {
+          "device_id": "Urządzenie"
+        }
+      },
+      "mac_address": {
+        "title": "Zaawansowana Konfiguracja (Krok: 2/3)",
+        "description": "Wprowadź adres MAC Bluetooth dla wybranego urządzenia.\n(Jeśli zostanie znaleziony automatycznie, zostanie wstępnie wypełniony.)",
+        "data": {
+          "mac": "Adres MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Zaawansowana Konfiguracja (Krok: 3/3)",
+        "description": "Skonfiguruj czas i inne zaawansowane ustawienia.",
+        "data": {
+          "on_debounce": "Opóźnienie Włączenia (sekundy)",
+          "off_debounce": "Opóźnienie Wyłączenia (sekundy)",
+          "inter_step_delay": "Opóźnienie Między Poleceniami (sekundy)",
+          "spawn_timeout": "Limit Czasu Tworzenia Procesu (sekundy)",
+          "pair_timeout": "Limit Czasu Parowania (sekundy)",
+          "trust_timeout": "Limit Czasu Zaufania (sekundy)",
+          "scan_duration": "Czas Trwania Skanowania Bluetooth (sekundy)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "To urządzenie jest już skonfigurowane.",
+      "no_bt_media_players_found_strict": "Nie znaleziono odtwarzaczy multimedialnych Bluetooth. Spróbuj metody Zaawansowanej Konfiguracji.",
+      "device_not_found": "Nie znaleziono urządzenia. Spróbuj ponownie.",
+      "no_media_player_entity_found": "Nie znaleziono encji odtwarzacza multimedialnego dla wybranego urządzenia.",
+      "unknown_step": "Wystąpił nieznany błąd. Rozpocznij od nowa."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ustawienia MiPower",
+        "description": "Skonfiguruj zaawansowane ustawienia dla przełącznika MiPower.\n\n**Odtwarzacz Multimedialny:** {media_player_name}\n**Adres MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Opóźnienie Włączenia (sekundy)",
+          "off_debounce": "Opóźnienie Wyłączenia (sekundy)",
+          "inter_step_delay": "Opóźnienie Między Poleceniami (sekundy)",
+          "spawn_timeout": "Limit Czasu Tworzenia Procesu (sekundy)",
+          "pair_timeout": "Limit Czasu Parowania (sekundy)",
+          "trust_timeout": "Limit Czasu Zaufania (sekundy)",
+          "scan_duration": "Czas Trwania Skanowania Bluetooth (sekundy)"
+        }
+      }
+    }
+  }
+}

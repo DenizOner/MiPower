@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Kies Opstelmetode",
+        "menu_options": {
+          "easy_setup": "Maklike Opstelling",
+          "advanced_setup": "Gevorderde Opstelling"
+        }
+      },
+      "easy_setup": {
+        "title": "Maklike Opstelling",
+        "description": "Kies jou Bluetooth-geaktiveerde mediaspeler uit die lys. \n(Slegs toestelle wat as Bluetooth-mediaspelers verskyn, word gelys.)",
+        "data": {
+          "device": "Toestel"
+        }
+      },
+      "advanced_setup": {
+        "title": "Gevorderde Opstelling (Stap: 1/3)",
+        "description": "Kies enige mediaspeler-entiteit uit Home Assistant.",
+        "data": {
+          "device_id": "Toestel"
+        }
+      },
+      "mac_address": {
+        "title": "Gevorderde Opstelling (Stap: 2/3)",
+        "description": "Voer die Bluetooth MAC-adres in vir die geselekteerde toestel.\n(Indien outomaties gevind, sal dit vooraf ingevul word.)",
+        "data": {
+          "mac": "Bluetooth MAC-adres"
+        }
+      },
+      "settings": {
+        "title": "Gevorderde Opstelling (Stap: 3/3)",
+        "description": "Stel tydsberekening en ander gevorderde instellings op.",
+        "data": {
+          "on_debounce": "Aanskakel-ontstuwing (sekondes)",
+          "off_debounce": "Afskakel-ontstuwing (sekondes)",
+          "inter_step_delay": "Vertraging Tussen Bevele (sekondes)",
+          "spawn_timeout": "Proses-skep Tydverstreke (sekondes)",
+          "pair_timeout": "Paring Tydverstreke (sekondes)",
+          "trust_timeout": "Vertroue Tydverstreke (sekondes)",
+          "scan_duration": "Bluetooth Skandeer Duur (sekondes)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Hierdie toestel is reeds opgestel.",
+      "no_bt_media_players_found_strict": "Geen Bluetooth mediaspelers gevind nie. Probeer die Gevorderde Opstelmetode.",
+      "device_not_found": "Toestel nie gevind nie. Probeer asseblief weer.",
+      "no_media_player_entity_found": "Geen mediaspeler-entiteit gevind vir die geselekteerde toestel nie.",
+      "unknown_step": "’n Onbekende fout het voorgekom. Begin asseblief oor."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Instellings",
+        "description": "Stel gevorderde instellings vir die MiPower-skakelaar op.\n\n**Mediaspeler:** {media_player_name}\n**MAC-adres:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Aanskakel-ontstuwing (sekondes)",
+          "off_debounce": "Afskakel-ontstuwing (sekondes)",
+          "inter_step_delay": "Vertraging Tussen Bevele (sekondes)",
+          "spawn_timeout": "Proses-skep Tydverstreke (sekondes)",
+          "pair_timeout": "Paring Tydverstreke (sekondes)",
+          "trust_timeout": "Vertroue Tydverstreke (sekondes)",
+          "scan_duration": "Bluetooth Skandeer Duur (sekondes)"
+        }
+      }
+    }
+  }
+}

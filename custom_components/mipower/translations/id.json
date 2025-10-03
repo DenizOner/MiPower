@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Pilih Metode Penyiapan",
+        "menu_options": {
+          "easy_setup": "Penyiapan Mudah",
+          "advanced_setup": "Penyiapan Lanjut"
+        }
+      },
+      "easy_setup": {
+        "title": "Penyiapan Mudah",
+        "description": "Pilih pemutar media berkemampuan Bluetooth Anda dari daftar. \n(Hanya perangkat yang muncul sebagai pemutar media Bluetooth yang terdaftar.)",
+        "data": {
+          "device": "Perangkat"
+        }
+      },
+      "advanced_setup": {
+        "title": "Penyiapan Lanjut (Langkah: 1/3)",
+        "description": "Pilih entitas pemutar media apa pun dari Home Assistant.",
+        "data": {
+          "device_id": "Perangkat"
+        }
+      },
+      "mac_address": {
+        "title": "Penyiapan Lanjut (Langkah: 2/3)",
+        "description": "Masukkan alamat MAC Bluetooth untuk perangkat yang dipilih.\n(Jika ditemukan secara otomatis, akan terisi sebelumnya.)",
+        "data": {
+          "mac": "Alamat MAC Bluetooth"
+        }
+      },
+      "settings": {
+        "title": "Penyiapan Lanjut (Langkah: 3/3)",
+        "description": "Konfigurasi pengaturan waktu dan pengaturan lanjutan lainnya.",
+        "data": {
+          "on_debounce": "Peredam Nyala (detik)",
+          "off_debounce": "Peredam Mati (detik)",
+          "inter_step_delay": "Penundaan Antar Perintah (detik)",
+          "spawn_timeout": "Batas Waktu Proses Spawn (detik)",
+          "pair_timeout": "Batas Waktu Pemasangan (detik)",
+          "trust_timeout": "Batas Waktu Kepercayaan (detik)",
+          "scan_duration": "Durasi Pindai Bluetooth (detik)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Perangkat ini sudah dikonfigurasi.",
+      "no_bt_media_players_found_strict": "Tidak ditemukan pemutar media Bluetooth. Coba metode Penyiapan Lanjut.",
+      "device_not_found": "Perangkat tidak ditemukan. Silakan coba lagi.",
+      "no_media_player_entity_found": "Tidak ditemukan entitas pemutar media untuk perangkat yang dipilih.",
+      "unknown_step": "Terjadi kesalahan yang tidak diketahui. Silakan mulai dari awal."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Pengaturan MiPower",
+        "description": "Konfigurasi pengaturan lanjutan untuk sakelar MiPower.\n\n**Pemutar Media:** {media_player_name}\n**Alamat MAC:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Peredam Nyala (detik)",
+          "off_debounce": "Peredam Mati (detik)",
+          "inter_step_delay": "Penundaan Antar Perintah (detik)",
+          "spawn_timeout": "Batas Waktu Proses Spawn (detik)",
+          "pair_timeout": "Batas Waktu Pemasangan (detik)",
+          "trust_timeout": "Batas Waktu Kepercayaan (detik)",
+          "scan_duration": "Durasi Pindai Bluetooth (detik)"
+        }
+      }
+    }
+  }
+}

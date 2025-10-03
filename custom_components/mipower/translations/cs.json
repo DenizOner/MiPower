@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Vyberte Metodu Nastavení",
+        "menu_options": {
+          "easy_setup": "Snadné Nastavení",
+          "advanced_setup": "Pokročilé Nastavení"
+        }
+      },
+      "easy_setup": {
+        "title": "Snadné Nastavení",
+        "description": "Vyberte svůj mediální přehrávač s podporou Bluetooth ze seznamu. \n(Jsou uvedena pouze zařízení, která se jeví jako mediální přehrávače Bluetooth.)",
+        "data": {
+          "device": "Zařízení"
+        }
+      },
+      "advanced_setup": {
+        "title": "Pokročilé Nastavení (Krok: 1/3)",
+        "description": "Vyberte libovolnou entitu mediálního přehrávače z Home Assistanta.",
+        "data": {
+          "device_id": "Zařízení"
+        }
+      },
+      "mac_address": {
+        "title": "Pokročilé Nastavení (Krok: 2/3)",
+        "description": "Zadejte MAC adresu Bluetooth pro vybrané zařízení.\n(Pokud se najde automaticky, bude předvyplněna.)",
+        "data": {
+          "mac": "Bluetooth MAC Adresa"
+        }
+      },
+      "settings": {
+        "title": "Pokročilé Nastavení (Krok: 3/3)",
+        "description": "Nakonfigurujte časování a další pokročilá nastavení.",
+        "data": {
+          "on_debounce": "Potlačení Chvění Zapnutí (sekundy)",
+          "off_debounce": "Potlačení Chvění Vypnutí (sekundy)",
+          "inter_step_delay": "Prodleva Mezi Příkazy (sekundy)",
+          "spawn_timeout": "Časový Limit Spuštění Procesu (sekundy)",
+          "pair_timeout": "Časový Limit Párování (sekundy)",
+          "trust_timeout": "Časový Limit Důvěry (sekundy)",
+          "scan_duration": "Doba Trvání Skenování Bluetooth (sekundy)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Toto zařízení je již nakonfigurováno.",
+      "no_bt_media_players_found_strict": "Nebyly nalezeny žádné mediální přehrávače Bluetooth. Zkuste metodu Pokročilé Nastavení.",
+      "device_not_found": "Zařízení nebylo nalezeno. Zkuste to prosím znovu.",
+      "no_media_player_entity_found": "Nebyla nalezena entita mediálního přehrávače pro vybrané zařízení.",
+      "unknown_step": "Nastala neznámá chyba. Začněte prosím znovu."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavení MiPower",
+        "description": "Nakonfigurujte pokročilá nastavení pro přepínač MiPower.\n\n**Mediální Přehrávač:** {media_player_name}\n**MAC Adresa:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Potlačení Chvění Zapnutí (sekundy)",
+          "off_debounce": "Potlačení Chvění Vypnutí (sekundy)",
+          "inter_step_delay": "Prodleva Mezi Příkazy (sekundy)",
+          "spawn_timeout": "Časový Limit Spuštění Procesu (sekundy)",
+          "pair_timeout": "Časový Limit Párování (sekundy)",
+          "trust_timeout": "Časový Limit Důvěry (sekundy)",
+          "scan_duration": "Doba Trvání Skenování Bluetooth (sekundy)"
+        }
+      }
+    }
+  }
+}

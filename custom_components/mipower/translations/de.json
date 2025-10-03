@@ -1,0 +1,72 @@
+{
+  "config": {
+    "title": "MiPower",
+    "step": {
+      "user": {
+        "title": "Einrichtungsmethode wählen",
+        "menu_options": {
+          "easy_setup": "Einfache Einrichtung",
+          "advanced_setup": "Erweiterte Einrichtung"
+        }
+      },
+      "easy_setup": {
+        "title": "Einfache Einrichtung",
+        "description": "Wählen Sie Ihren Bluetooth-fähigen Media Player aus der Liste aus. \n(Es werden nur Geräte aufgelistet, die als Bluetooth Media Player erscheinen.)",
+        "data": {
+          "device": "Gerät"
+        }
+      },
+      "advanced_setup": {
+        "title": "Erweiterte Einrichtung (Schritt: 1/3)",
+        "description": "Wählen Sie eine beliebige Media Player Entität aus Home Assistant.",
+        "data": {
+          "device_id": "Gerät"
+        }
+      },
+      "mac_address": {
+        "title": "Erweiterte Einrichtung (Schritt: 2/3)",
+        "description": "Geben Sie die Bluetooth MAC-Adresse für das ausgewählte Gerät ein.\n(Wenn automatisch gefunden, wird es vorausgefüllt.)",
+        "data": {
+          "mac": "Bluetooth MAC-Adresse"
+        }
+      },
+      "settings": {
+        "title": "Erweiterte Einrichtung (Schritt: 3/3)",
+        "description": "Konfigurieren Sie Timing und andere erweiterte Einstellungen.",
+        "data": {
+          "on_debounce": "Einschaltverzögerung (Sekunden)",
+          "off_debounce": "Ausschaltverzögerung (Sekunden)",
+          "inter_step_delay": "Verzögerung zwischen Befehlen (Sekunden)",
+          "spawn_timeout": "Prozesserstellungs-Timeout (Sekunden)",
+          "pair_timeout": "Kopplungs-Timeout (Sekunden)",
+          "trust_timeout": "Vertrauens-Timeout (Sekunden)",
+          "scan_duration": "Bluetooth Scan-Dauer (Sekunden)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Dieses Gerät ist bereits konfiguriert.",
+      "no_bt_media_players_found_strict": "Keine Bluetooth Media Player gefunden. Versuchen Sie die Erweiterte Einrichtungsmethode.",
+      "device_not_found": "Gerät nicht gefunden. Bitte versuchen Sie es erneut.",
+      "no_media_player_entity_found": "Keine Media Player Entität für das ausgewählte Gerät gefunden.",
+      "unknown_step": "Ein unbekannter Fehler ist aufgetreten. Bitte beginnen Sie von vorne."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MiPower Einstellungen",
+        "description": "Konfigurieren Sie erweiterte Einstellungen für den MiPower Schalter.\n\n**Media Player:** {media_player_name}\n**MAC-Adresse:** {mac_address}\n",
+        "data": {
+          "on_debounce": "Einschaltverzögerung (Sekunden)",
+          "off_debounce": "Ausschaltverzögerung (Sekunden)",
+          "inter_step_delay": "Verzögerung zwischen Befehlen (Sekunden)",
+          "spawn_timeout": "Prozesserstellungs-Timeout (Sekunden)",
+          "pair_timeout": "Kopplungs-Timeout (Sekunden)",
+          "trust_timeout": "Vertrauens-Timeout (Sekunden)",
+          "scan_duration": "Bluetooth Scan-Dauer (Sekunden)"
+        }
+      }
+    }
+  }
+}
