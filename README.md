@@ -136,6 +136,7 @@ In the configuration or options menu, you can fine-tune the timing of Bluetooth 
 The integration uses a smart wake-up algorithm:
 1. Checks if the media player is already on/available before sending any Bluetooth commands
 2. Broadcasts pairing signals for the configured duration (or stops early if device becomes available)
-3. Waits for the device to fully wake up, with timeout = `on_debounce - total_elapsed_time`
+3. Waits for the device to fully wake up with timeout
 
 4. Provides detailed logging for troubleshooting
+
