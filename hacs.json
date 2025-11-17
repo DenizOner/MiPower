@@ -1,8 +1,7 @@
 {
   "name": "MiPower",
-  "content_in_root": false,
-  "homeassistant": "2023.1.0",
+  "description": "Control power state of media players that support Bluetooth pairing wake-up",
+  "homeassistant": "2024.1.0",
   "render_readme": true,
-  "country": ["TR"],
-  "domains": ["switch"]
+  "iot_class": "local_polling"
 }
