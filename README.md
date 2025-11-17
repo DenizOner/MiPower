@@ -15,6 +15,8 @@ This integration creates a `switch` entity in Home Assistant:
 - **TURNING OFF** the switch calls the `media_player.turn_off` service for the linked device
 - The switch state automatically synchronizes with the linked media player entity's state
 
+---
+
 ## 🤝 Support the Project
 
 MiPower is developed with the vision of contributing value to the open-source community. Your support is vital to maintain this project's continuity and development speed.
@@ -26,6 +28,8 @@ If you appreciate my work, you can support me through GitHub Sponsorships or the
 * [**Buy Me a Coffee**](https://www.buymeacoffee.com/DenizOner)
 
 Alternatively, you can click the **Sponsor button (❤️)** in the top right corner of the repository to see all funding options.
+
+---
 
 ## Prerequisites
 
@@ -133,4 +137,5 @@ The integration uses a smart wake-up algorithm:
 1. Checks if the media player is already on/available before sending any Bluetooth commands
 2. Broadcasts pairing signals for the configured duration (or stops early if device becomes available)
 3. Waits for the device to fully wake up, with timeout = `on_debounce - total_elapsed_time`
+
 4. Provides detailed logging for troubleshooting
