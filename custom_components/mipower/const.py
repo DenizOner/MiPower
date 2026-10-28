@@ -59,7 +59,7 @@ CONF_SCAN_STOP_TIMEOUT = "scan_stop_timeout"
 BLUETOOTHCTL_COMMAND = "bluetoothctl"
 # The expected prompt from the bluetoothctl utility. pexpect waits for this prompt
 # to know that the tool is ready to receive the next command.
-BLUETOOTHCTL_PROMPT = r"\[bluetoothctl\]> "
+BLUETOOTHCTL_PROMPT = r"\[[^\]\r\n]+\](?:\x1b\[[0-9;]*m)*[>#] "
 # The 'pair' subcommand string.
 CMD_PAIR = "pair"
 # The 'scan on' subcommand string.

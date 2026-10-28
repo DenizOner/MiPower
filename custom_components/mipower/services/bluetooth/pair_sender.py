@@ -51,6 +51,22 @@ class BluetoothPairSender:
             TurnOnFailedReason if failed, None if successful
         """
         try:
+            paired = self._process_manager.get_pairing_state(
+                mac_address, timeout=timing_options.spawn_timeout
+            )
+            if paired is True:
+                _LOGGER.warning(
+                    "[%s (%s)] Preserving existing Bluetooth pairing with %s; "
+                    "a pairing wake request cannot be sent safely.",
+                    name, media_player_entity_id, mac_address,
+                )
+                return TurnOnFailedReason.ALREADY_PAIRED
+            if paired is None:
+                _LOGGER.warning(
+                    "[%s (%s)] Pairing state of %s is unknown; wake request skipped.",
+                    name, media_player_entity_id, mac_address,
+                )
+                return TurnOnFailedReason.SIGNAL_FAILED
             _LOGGER.info(
                 "[%s (%s)] Sending Bluetooth pair command to %s.",
                 name,

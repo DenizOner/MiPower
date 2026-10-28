@@ -15,6 +15,10 @@ class TurnOnFailedReason(Enum):
     Provides specific failure reasons for better error handling and logging.
     """
 
+    ALREADY_PAIRED = (
+        "Device is already paired. MiPower will not replace an existing pairing "
+        "to send a wake request; use an adapter without an existing bond to this device."
+    )
     UNKNOWN = "An unknown error occurred."
     ALREADY_ON = "Media player is already on."
     BLUETOOTH_SERVICE_FAILED = "Bluetooth service failed to wake up the device."

@@ -6,6 +6,7 @@ following the Single Responsibility Principle.
 """
 
 import logging
+import re
 from typing import Any
 
 import pexpect  # type: ignore[import]
@@ -97,6 +98,31 @@ class BluetoothProcessManager:
             return True
         except pexpect.exceptions.TIMEOUT:
             return False
+
+    def get_pairing_state(self, mac_address: str, timeout: float) -> bool | None:
+        """Read a fresh target-specific pairing state before sending pair.
+
+        Unknown output fails closed: some bluetoothctl versions replace an
+        existing bond when asked to pair again.
+        """
+        if not self._child or not self._child.isalive():
+            return None
+        if not re.fullmatch(r"(?:[0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}", mac_address):
+            return None
+        try:
+            self._child.sendline(f"info {mac_address}")
+            # Earlier scan commands may leave prompts in the input buffer. Wait
+            # for this device's info header before consuming its final prompt.
+            header = rf"(?i)Device {re.escape(mac_address)}(?: \([^\r\n]*\))?\r?\n"
+            self._child.expect(header, timeout=timeout)
+            self._child.expect(BLUETOOTHCTL_PROMPT, timeout=timeout)
+            output = re.sub(r"\x1b\[[0-?]*[ -/]*[@-~]", "", self._child.before)
+            match = re.search(r"(?im)^\s*Paired:\s*(yes|no)\s*$", output)
+            if match:
+                return match.group(1).lower() == "yes"
+        except (pexpect.exceptions.TIMEOUT, pexpect.exceptions.EOF):
+            _LOGGER.warning("Could not read pairing state for %s", mac_address)
+        return None
 
     def get_output(self) -> str:
         """
